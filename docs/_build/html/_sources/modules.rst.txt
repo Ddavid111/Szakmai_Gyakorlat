@@ -1,0 +1,14 @@
+1.hét
+=====
+
+Technikai dokumentáció
+----------------------
+
+- Összehasonlítás Markup (jelölő nyelvekről), például MarkDown, reStructuredText
+- További alternatívák vizsgálata.
+- Áttekintés az elvégzett vizsgálatokról MS Word docx (vagy LibreOffice Writer odt) formátumban.
+
+.. toctree::
+   :maxdepth: 2
+
+   my_module
