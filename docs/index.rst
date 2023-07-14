@@ -7,9 +7,9 @@ Szakmai Gyakorlat
 =========================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Contents:
 
-   elso
-   masodik
-
+   chapters/01
+   chapters/02
+   chapters/task_2

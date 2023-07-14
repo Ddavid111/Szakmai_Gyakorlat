@@ -1,0 +1,19 @@
+    title Bírálat feltöltésének lépései
+
+    participant Témavezető as T
+    participant Rendszer as R
+    participant Külső bíráló as KB
+
+    T->R: Felhasználó bejelentkezik
+    R-->KB: Felhasználó belép
+    T->R: Felhasználó kiválasztja a szakdolgozatot
+    R-->KB: Szakdolgozat betöltése és megjelenítése a rendszerben
+    T->R: Felhasználó feltölti a bírálatot (PDF)
+    R-->KB: Bírálat mentése és feldolgozása a rendszerben
+    R-->KB: Rendszer ellenőrzi, hogy a bírálat PDF formátumban és érvényes-e
+    R-->KB: Rendszer előnézetet készít a bírálatból
+    R-->KB: Előnézet megjelenítése a rendszerben
+    KB->R: Külső bíráló szerkeszti a bírálatot (ha szükséges)
+    KB->R: Bírálat véglegesítése és mentése a rendszerben
+    KB->R: Visszajelzés a rendszerben a témavezetőnek
+    R-->T: Témavezető megtekinti a bírálatot

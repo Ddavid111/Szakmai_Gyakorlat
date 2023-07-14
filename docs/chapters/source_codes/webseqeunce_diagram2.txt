@@ -1,0 +1,39 @@
+ title Többszörös bírálói felkérés folyamata
+
+    participant Elnök as E
+    participant Hallgató as H
+    participant Rendszer as RS
+    participant Témavezető as T
+    participant Bíráló as B
+
+    E->H: Felkérés regisztrációra
+    Hallgató->Elnök: Sikeres reg.
+    Elnök->Témavezető: Felkérés bírálatra
+    Témavezető->Bíráló: Felkérés bírálatra
+
+
+    loop Több bíráló
+        RS -> B: Bíráló kiválasztása
+        RS -> B: Felkérés érkezett
+        B -> RS: Felkérés elfogadása?
+        
+
+        alt Felkérés elfogadva
+            B -> RS: Elfogadva
+        else Felkérés visszautasítva
+            B -> RS: Visszautasítva
+        end
+
+    
+
+        alt Minden bíráló visszautasította?
+            RS -> RS: Bírálók felkérése folytatása
+        else Legalább egy bíráló elfogadta
+            RS -> RS: Bírálók visszautasítása
+        end
+    end
+
+    RS -> T: Visszajelzés a bírálókról
+
+    T -> E: Bírálat
+    B -> E: Bírálat

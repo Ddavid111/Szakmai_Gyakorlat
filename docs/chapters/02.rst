@@ -1,0 +1,85 @@
+2. hét
+======
+
+Repository létrehozása
+----------------------
+
+https://github.com/Ddavid111/Szakmai_Gyakorlat
+
+
+Folyamat ábrázolása
+-------------------
+
+.. image:: images/Szekvenciadiagramok/1.jpg
+
+.. literalinclude:: source_codes/webseqeunce_diagram1.txt
+   
+.. image:: images/Szekvenciadiagramok/2.jpg
+
+.. literalinclude:: source_codes/webseqeunce_diagram2.txt
+   
+.. image:: images/Szekvenciadiagramok/3.jpg
+
+.. literalinclude:: source_codes/webseqeunce_diagram3.txt
+
+.. image:: images/Szekvenciadiagramok/4.jpg    
+
+.. literalinclude:: source_codes/webseqeunce_diagram4.txt
+
+Szerepkörök leírása
+-------------------
+
+1. Hallgató:
+
+- Szakdolgozat létrehozása, szerkesztése és mentése a rendszerben.
+- Az elkészült dolgozat benyújtása a rendszeren keresztül.
+- Visszajelzések és észrevételek megtekintése a dolgozatról a bírálók, témavezető vagy a bizottság részéről.
+- A bírálók és a bizottság értékeléseinek megtekintése.
+- A védés időpontjának és helyszínének megtekintése és kezelése.
+- A végső értékelés és jegy megtekintése.
+
+2. Bíráló:
+
+- A dolgozat értékelése és visszajelzés küldése a hallgatónak.
+- A dolgozat nyomon követése és annak státuszának frissítése a rendszerben.
+- Az értékelőlap és a végső jegy rögzítése a rendszerben.
+
+3. Záróvizsga jegyzője:
+
+- A záróvizsga időpontjának és helyszínének meghatározása és frissítése.
+- A záróvizsga résztvevőinek (hallgató, bírálók, bizottság) értesítése és meghívók kiküldése.
+- A záróvizsga jegyzőkönyvének vezetése és rögzítése a rendszerben.
+
+4. Záróvizsga bizottság elnöke:
+
+- A bizottság tagjainak kijelölése és módosítása.
+- A záróvizsga menetének és a kérdéseknek meghatározása.
+- A hallgató szakdolgozatának értékelése a bizottság véleménye alapján.
+- A végső értékelés rögzítése a rendszerben.
+
+5. Témavezető:
+
+- A hallgatóval való kommunikáció és támogatás a szakdolgozat elkészítése során.
+- A hallgató dolgozatának nyomon követése és visszajelzések küldése.
+- A bírálók és a bizottság értékeléseinek megtekintése.
+- A végső értékelés és jegy rögzítése a rendszerben.
+
+Használati esetek
+-----------------
+
+.. image:: images/Use-case_diagram/use-case1.jpg
+
+Lapok részletezése
+------------------
+
+.. image:: images/Web_pages/Login.jpg
+
+.. image:: images/Web_pages/Registration.jpg
+
+.. image:: images/Web_pages/Forgotten_password.jpg
+
+.. image:: images/Web_pages/Thesis_list.jpg
+
+.. image:: images/Web_pages/Thesis_details.jpg
+
+.. image:: images/Web_pages/Thesis_upload.png

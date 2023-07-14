@@ -1,0 +1,22 @@
+    title Hallgatók Felvitele
+    participant Bizottság Elnöke as BE
+    participant Jegyző as J
+    participant Rendszer as R
+    participant Hallgató as H
+
+    BE->>R: Hallgató felvételének kezdete
+    R->>H: Hallgatói adatok bekérése
+    H->>R: Hallgatói adatok továbbítása
+    
+    
+    R->>J: Hallgatói adatok bekérése
+   
+
+    J->>R: Hallgatói adatok rögzítése
+    
+
+    R-->>BE: Hallgató felvétele sikeres
+    
+
+    R-->>J: Hallgató felvétele sikeres
+    
