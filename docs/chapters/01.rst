@@ -9,28 +9,49 @@ Technikai dokumentáció
 
 **Markdown és Sphinx előnyei és hátrányai:**
 
+    +-------------------------------------------------+-----------------------------------------------+
+    | | Markdown Előnyei                              | | Markdown Hátrányai                          |
+    +=================================================+===============================================+
+    | | Egyszerűbb és könnyebb nyelv a megtanulásához | | Korlátozottabb formázási lehetőségek vannak |
+    | | és használatához.                             | | a rST-hez képest.                           |
+    +-------------------------------------------------+-----------------------------------------------+
+    | | Könnyen olvasható és írható intuitív szintaxi-| | Nincsenek beépített támogatások speciális   |
+    | | sa van                                        | | elemekhez, például táblázatokhoz vagy       |
+    | |                                               | | bonyolultabb struktúrákhoz                  |
+    +-------------------------------------------------+-----------------------------------------------+
+    | | Széles körben támogatott és használt a weben  | | Előfordulhat hogy hiányoznak specifikus     |
+    | | és más platformokon                           | | funkciók vagy kiterjesztések, amelyeket más | 
+    | |                                               | | jelölőnyelvek például rST vagy HTML         |
+    | |                                               | | támogatnak                                  |  
+    +-------------------------------------------------+-----------------------------------------------+
+    | | A Markdown dokumentumok egyszerűen            | |                                             |
+    | | átalakíthatók HTML-re, vagy más formátumokra  | |                                             |
+    +-------------------------------------------------+-----------------------------------------------+
+    | | Kevesebb szintaktikai elemet használ, így     | |                                             |
+    | | kevesebb figyelmet kell fordítani a formázás  | |                                             |
+    | | részleteire                                   | |                                             |
+    +-------------------------------------------------+-----------------------------------------------+
 
-.. csv-table::
-   :header-rows: 1
-   
-
-    Markdown előnyei ,Markdown hátrányai
-    Egyszerűbb és könnyebb nyelv a megtanulásához és használatához, Korlátozottabb formázási lehetőségek vannak a RST-hez képest
-    Könnyen olvasható és írható intuitív szintaxisa van, Nincsenek beépített támogatások speciális elemekhez például táblázatokhoz vagy bonyolultabb struktúrákhoz
-    Széles körben támogatott és használt a weben és más platformokon, Előfordulhat hogy hiányoznak specifikus funkciók vagy kiterjesztések amelyeket más jelölőnyelvek például RST vagy HTML támogatnak
-    A Markdown dokumentumok egyszerűen átalakíthatók HTML-re vagy más formátumokra
-    Kevesebb szintaktikai elemet használ így kevesebb figyelmet kell fordítani a formázás részleteire
-
-.. csv-table::
-   :header-rows: 1
-   
-    reStructuredText (RST) előnyei ,reStructuredText (RST) hátrányai
-    Széles körű támogatást és integrációt kínál a Sphinx dokumentációs rendszerrel amely erőteljes dokumentáció-generálási eszközkészlet, Bonyolultabb és részletesebb szintaxissal rendelkezik amelynek elsajátítása időbe telhet
-    Gazdagabb formázási lehetőségeket és szintaktikai elemeket kínál a Markdownhoz képest például táblázatok kereszthivatkozások direktívák stb, Kisebb mértékű támogatása és elterjedtsége lehet más platformokon és eszközökben a Markdownhoz képest
-    Támogatja a bonyolultabb dokumentumstruktúrákat amelyek nagyobb projektek vagy komplexebb tartalmak esetén hasznosak lehetnek, A formázás részleteire jobban oda kell figyelni ami időigényesebb lehet
-    Az RST dokumentumok átalakíthatók más formátumokba például HTML PDF vagy LaTeX 
-
-
+    +-------------------------------------------------+-----------------------------------------------+
+    | | reStructuredText (rST) előnyei                | | reStructuredText (rST) hátrányai            |
+    +=================================================+===============================================+
+    | | Széles körű támogatást és integrációt kínál a | | Bonyolultabb és részletesebb szintaxissal   |
+    | | Sphinx dokumentációs rendszerrel amely        | | rendelkezik, amelynek elsajátítása időbe    |
+    | | erőteljes dokumentáció-generálási             | | telhet                                      |
+    | | eszközkészlet                                 | |                                             |
+    +-------------------------------------------------+-----------------------------------------------+
+    | | Gazdagabb formázási lehetőségeket és          | | Kisebb mértékű támogatása és elterjedtsége  |
+    | | szintaktikai elemeket kínál a Markdownhoz     | | lehet más platformokon és eszközökben       |
+    | | képest például táblázatok kereszthivatkozások | | a Markdownhoz képest                        |
+    | | direktívák stb,                               | |                                             |
+    +-------------------------------------------------+-----------------------------------------------+
+    | | Támogatja a bonyolultabb dokumentumstruktúrá- | | A formázás részleteire jobban oda kell      |
+    | | kat, amelyek nagyobb projektek vagy komplexebb| | figyelni, ami időigényesebb lehet           |
+    | | tartalmak esetén hasznosak lehetnek           | |                                             |
+    +-------------------------------------------------+-----------------------------------------------+
+    | | Az rST dokumentumok átalakíthatók más         | |                                             |
+    | | formátumokba például HTML PDF vagy LaTeX      | |                                             |
+    +-------------------------------------------------+-----------------------------------------------+
 
 
 További alternatívák vizsgálata
@@ -68,7 +89,7 @@ Alapvető fogalmak és működés áttekintése.
 - `git status`: aktuális könyvtár állapota
 - `git add <fájlnév>`: adott fájl hozzáadása
 - `git add .` : több fájl hozzáadása
-- `git commit -m "First Commit"`: változtatások rögzítése opcionálisan üzenettel is
+- `git commit -m "FirST Commit"`: változtatások rögzítése opcionálisan üzenettel is
 - `git remote add origin <távoli repository URL-je>`: létrehozza a kapcsolatot a helyi és a távoli repository között, és lehetővé teszi a közöttük lévő adatok cseréjét és szinkronizálását
 - `git remote set-url origin <távoli repository URL-je>`: ezzel a parancsal megváltoztathatjuk a távoli repository URL-jét, ha például szeretnénk másik távoli repositoryra mutatni
 - `git remote -v`: a távoli repository-kat és azok URL-jeit jeleníti meg a helyi repositoryban
@@ -87,19 +108,27 @@ A branchek segítségével különböző változtatásokat végezhetünk az adot
 
 1. Új branch létrehozása: ``git branch <branchnév>`` 
 
-.. image:: images/Branch/branch1.jpg
+.. code:: 
+
+    git branch new
 
 2. Átváltás a branchre: ``git checkout <branchnév>``
 
-.. image:: images/Branch/branch2.jpg
+.. code:: 
+
+    git checkout new
 
 3. Branchek listázása: ``git branch`` (Az aktuális branchet a "*"-al jelölik.)
 
-.. image:: images/Branch/branch3.jpg
+.. code::
+
+    git branch
 
 4. Pusholás: ``git push origin new``
 
-.. image:: images/Branch/branch4.jpg
+.. code::
+
+    git push origin new
 
 5. Eredmény:
 
@@ -114,8 +143,6 @@ A ``merge`` folyamata során a Git automatikusan összefűzi (integrálja) a ké
 
 	git merge <branchnév>
 
-.. image:: images/Merge/merge.jpg
-
 **Tagging**
 
 Amely lehetővé teszi az adott commitok vagy verziók megjelölését a repositoryban. 
@@ -125,7 +152,7 @@ A ``tag`` egy nevet vagy azonosítót ad a commitnak, hogy könnyen hivatkozhass
 
 	git tag <tagnév>
 
-.. image:: images/Tag/tag1.jpg
+
 
 Eredmény:
 
@@ -139,7 +166,7 @@ A ``rebase`` folyamata során a Git lehetővé teszi a commitok átrendezését 
 
 	git rebase <branchnév>
 
-.. image:: images/Rebase/rebase1.jpg
+
 
 
 SSH kulcsok generálása (ssh-keygen, ssh-agent)
@@ -172,7 +199,6 @@ A "your_email@example.com" helyére írjuk be a saját e-mail címünket.
 
     eval "$(ssh-agent -s)"
 
-.. image:: images/Ssh/ssh2.jpg
 
 4. Létrehozunk egy üres fájlt a .ssh mappában és szerkesztjük azt.
 
@@ -197,8 +223,6 @@ Ez a konfiguráció azt eredményezi, hogy az SSH-kulcsok automatikusan hozzáad
 
     ssh-add ~/.ssh/id_ed25519
 
-.. image:: images/Ssh/ssh5.jpg
-
 6. Nyissuk meg a Githubot és készítsünk egy új ssh kulcsot. A ``cat ~/.ssh/id_ed25519.pub`` parancsot használhatjuk a Git Bash-ben az Ed25519 publikus kulcs tartalmának megjelenítéséhez. Az id_ed25519.pub fájl a publikus kulcs fájlja, amelyet generáltunk az Ed25519 kulcspárhoz.
 
 .. image:: images/Ssh/ssh6.jpg
@@ -207,8 +231,6 @@ Ez a konfiguráció azt eredményezi, hogy az SSH-kulcsok automatikusan hozzáad
 
     cat ~/.ssh/id_ed25519.pub
 
-.. image:: images/Ssh/ssh7.jpg
-
 .. image:: images/Ssh/ssh8.jpg
  
 7. Repository klónozás. Githubon az egyik repository-nál válasszuk ki az ssh fült és másoljuk ki a szöveget, majd a megfelelő paranccsal hajtsuk végre a klónozást.
@@ -216,8 +238,6 @@ Ez a konfiguráció azt eredményezi, hogy az SSH-kulcsok automatikusan hozzáad
 .. code::
 
     git clone <repository ssh hivatkozása>
-
-.. image:: images/Ssh/ssh9.jpg
 
 + Könyvek, linkek átnézése
 

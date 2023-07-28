@@ -1,19 +1,100 @@
-    title Bírálat feltöltésének lépései
+title Bírálat feltöltésének lépései
 
-    participant Témavezető as T
-    participant Rendszer as R
-    participant Külső bíráló as KB
+participant Témavezető as T
+participant Külső bíráló as KB
 
-    T->R: Felhasználó bejelentkezik
-    R-->KB: Felhasználó belép
-    T->R: Felhasználó kiválasztja a szakdolgozatot
-    R-->KB: Szakdolgozat betöltése és megjelenítése a rendszerben
-    T->R: Felhasználó feltölti a bírálatot (PDF)
-    R-->KB: Bírálat mentése és feldolgozása a rendszerben
-    R-->KB: Rendszer ellenőrzi, hogy a bírálat PDF formátumban és érvényes-e
-    R-->KB: Rendszer előnézetet készít a bírálatból
-    R-->KB: Előnézet megjelenítése a rendszerben
-    KB->R: Külső bíráló szerkeszti a bírálatot (ha szükséges)
-    KB->R: Bírálat véglegesítése és mentése a rendszerben
-    KB->R: Visszajelzés a rendszerben a témavezetőnek
-    R-->T: Témavezető megtekinti a bírálatot
+note over T
+Felhasználó bejelentkezik
+end note
+
+note over T 
+Témavezető listázza az elérhető bírálókat a rendszerben
+end note
+
+note over T
+A rendszer lekéri és megjeleníti a bírálók listáját
+end note
+
+note over T 
+A rendszer visszaküldi a bírálók listáját a témavezetőnek
+end note
+
+note over KB 
+Felhasználó belép
+end note
+
+note over T 
+Felhasználó kiválasztja a szakdolgozatot
+end note
+
+note over KB 
+Felhasználó kiválasztja a szakdolgozatot
+end note
+
+note over KB 
+Szakdolgozat betöltése és megjelenítése a rendszerben
+end note
+
+note over T 
+Szakdolgozat betöltése és megjelenítése a rendszerben
+end note
+
+note over T 
+Felhasználó feltölti a bírálatot (PDF)
+end note
+
+note over KB 
+Felhasználó feltölti a bírálatot (PDF)
+end note
+
+note over T 
+Bírálat mentése és feldolgozása a rendszerben
+end note
+
+note over KB 
+Bírálat mentése és feldolgozása a rendszerben
+end note
+
+note over T 
+Rendszer ellenőrzi, hogy a bírálat PDF formátumban és érvényes-e
+end note
+
+note over KB 
+Rendszer ellenőrzi, hogy a bírálat PDF formátumban és érvényes-e
+end note
+
+note over T 
+Rendszer előnézetet készít a bírálatból
+end note
+
+note over KB 
+Rendszer előnézetet készít a bírálatból
+end note
+
+note over T
+Témavezető szerkeszti a bírálatot (szükség esetén)
+end note
+
+note over KB
+Külső bíráló szerkeszti a bírálatot (szükség esetén)
+end note
+
+note over T 
+Bírálat véglegesítése és mentése a rendszerben
+end note
+
+note over KB 
+Bírálat véglegesítése és mentése a rendszerben
+end note
+
+KB->T: Visszajelzés a rendszerben a témavezetőnek
+T->KB: Visszajelzés a rendszerben a külső bírálónak
+
+note over T 
+Témavezető megtekinti a bírálatot
+end note
+
+note over KB 
+Külső bíráló megtekinti a bírálatot
+end note
+
