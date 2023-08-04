@@ -6,33 +6,19 @@ participant Témavezető as T
 participant Bíráló as B
 
 E->H: Felkérés regisztrációra
-Hallgató->Elnök: Sikeres reg.
+Hallgató->Elnök: Sikeres regisztráció
 Elnök->Témavezető: Felkérés bírálatra
 Témavezető->Bíráló: Felkérés bírálatra
 
-
 loop Több bíráló
-
     alt Felkérés elfogadva
-       note left of B 
-       Elfogadva
-       end note
+        note left of B 
+        Elfogadva
+        end note
     else Felkérés visszautasítva
         note left of B 
         Visszautasítva
         end note
-    end
-
-   
-
-    alt Minden bíráló visszautasította?
-    note right of T
-    Bírálók felkérése folytatása
-    end note
-    else Legalább egy bíráló elfogadta
-    note right of T 
-    Bírálók visszautasítása
-    end note
     end
 end
 
@@ -42,4 +28,3 @@ end note
 
 T -> E: Bírálat
 B -> E: Bírálat
-

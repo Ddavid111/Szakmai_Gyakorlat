@@ -7,9 +7,12 @@ Szakmai Gyakorlat
 =========================================
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 6
    :caption: Contents:
 
    chapters/01
+   chapters/Tervezes
    chapters/02
-   chapters/task_2
+   chapters/Hasznalati_esetek
+   chapters/Lapok_reszletezese
+   chapters/Lapok_kozotti_atmenetek
