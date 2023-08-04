@@ -1,5 +1,5 @@
-2. -  3. hét
-============
+Szerepkörök leírása és Folyamatok ábrázolása
+============================================
 
 Repository létrehozása
 ----------------------
@@ -48,7 +48,7 @@ Szerepkörök leírása
 Folyamat ábrázolása
 -------------------
 
-.. image:: images/Szekvenciadiagramok/1.jpg
+.. image:: images/Szekvenciadiagramok/Biralati_folyamat.jpg
 
 .. literalinclude:: source_codes/webseqeunce_diagram1.txt
 
@@ -69,7 +69,7 @@ A rendszer célja, hogy hatékonyan kezelje a szakdolgozatok *Bírálati Folyama
 #. *Témavezető elküldi a bírálatot az Elnöknek:* A *Témavezető* szintén elkészíti a saját bírálatát a szakdolgozatról, és azt az *Elnöknek* küldi el. Ez a lépés lehetővé teszi, hogy mind a *Témavezető*, mind a *Bíráló* észrevételeit összevetve az *Elnök* döntést hozzon a szakdolgozattal kapcsolatban.
 
 
-.. image:: images/Szekvenciadiagramok/222.jpg
+.. image:: images/Szekvenciadiagramok/Tobbszoros_Biraloi_Felkeres.jpg
 
 .. literalinclude:: source_codes/webseqeunce_diagram2.txt
 
@@ -96,7 +96,7 @@ Ez a szekvenciadiagram lépésről lépésre bemutatja a *Többszörös Bírál�
 #. *Témavezető elküldi a bírálatot az Elnöknek:* A *Témavezető* szintén elkészíti a saját bírálatát a szakdolgozatról, és azt az *Elnöknek* küldi el. Ez a lépés lehetővé teszi, hogy mind a *Témavezető*, mind a *Bíráló* észrevételeit összevetve az *Elnök* döntést hozzon a szakdolgozattal kapcsolatban.
 
 
-.. image:: images/Szekvenciadiagramok/33.jpg
+.. image:: images/Szekvenciadiagramok/Hallgatok_Felvitele.jpg
 
 .. literalinclude:: source_codes/webseqeunce_diagram3.txt
 
@@ -127,7 +127,7 @@ Ez a szekvenciadiagram részletesen szemlélteti a *Hallgatók felvitele* folyam
 #. *Adatlap jóváhagyásának értesítése a Hallgatónak:* Az *Elnök* értesíti a *Hallgatót* az adatlap jóváhagyásáról és a felvétel megerősítéséről.
 
 
-.. image:: images/Folyamatabra/444.png    
+.. image:: images/Folyamatabra/Biralat_Feltoltes.png    
 
 **Leírás**
 

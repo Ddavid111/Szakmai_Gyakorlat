@@ -132,7 +132,7 @@ A branchek segítségével különböző változtatásokat végezhetünk az adot
 
 5. Eredmény:
 
-.. image:: images/Branch/branch5.jpg
+.. image:: images/Branch/branch_5.jpg
 
 **Merge**
 
@@ -156,7 +156,7 @@ A ``tag`` egy nevet vagy azonosítót ad a commitnak, hogy könnyen hivatkozhass
 
 Eredmény:
 
-.. image:: images/Tag/tag2.jpg
+.. image:: images/Tag/tag_2.jpg
 
 **Rebase**
 
@@ -191,7 +191,7 @@ Az SSH-kulcsoknak két komponense van: a privát kulcs (private key) és a publi
 
 A "your_email@example.com" helyére írjuk be a saját e-mail címünket.
 
-.. image:: images/Ssh/ssh1.jpg
+.. image:: images/Ssh/ssh_1.jpg
 
 3. Az ``eval "$(ssh-agent -s)"`` parancs az ssh-agent indítására szolgál a Git Bash-ben. Az ssh-agent egy program, amely kezeli és tárolja a privát SSH-kulcsokat, és hozzáférést biztosít nekik a hitelesítés során.
 
@@ -213,9 +213,9 @@ A "your_email@example.com" helyére írjuk be a saját e-mail címünket.
 
 Ez a konfiguráció azt eredményezi, hogy az SSH-kulcsok automatikusan hozzáadódnak az ssh-agent-hez, amikor azokat használjuk a Git Bash-ben. Ez megkönnyíti az SSH-kulcsok kezelését és az azonosítás folyamatát, mivel nem kell újra megadni a jelszót minden egyes Git művelet során, amely az SSH-kulcsokat igényli. Az IdentityFile beállítás pedig meghatározza az Ed25519 privát kulcs fájl elérési útvonalát és nevét az ~/.ssh/id_ed25519-en keresztül.
 
-.. image:: images/Ssh/ssh3.jpg
+.. image:: images/Ssh/ssh_3.jpg
 
-.. image:: images/Ssh/ssh4.jpg
+.. image:: images/Ssh/ssh_4.jpg
 
 5. Az ``ssh-add ~/.ssh/id_ed25519`` parancsot használhatjuk a Git Bash-ben az Ed25519 privát kulcs hozzáadásához az ssh-agent-hez. Az ssh-add parancs segítségével hozzáadhatjuk a privát kulcsot az ssh-agent-hez, hogy az a kulcs felhasználható legyen az azonosításhoz.
 
@@ -225,13 +225,13 @@ Ez a konfiguráció azt eredményezi, hogy az SSH-kulcsok automatikusan hozzáad
 
 6. Nyissuk meg a Githubot és készítsünk egy új ssh kulcsot. A ``cat ~/.ssh/id_ed25519.pub`` parancsot használhatjuk a Git Bash-ben az Ed25519 publikus kulcs tartalmának megjelenítéséhez. Az id_ed25519.pub fájl a publikus kulcs fájlja, amelyet generáltunk az Ed25519 kulcspárhoz.
 
-.. image:: images/Ssh/ssh6.jpg
+.. image:: images/Ssh/ssh_6.jpg
 
 .. code::
 
     cat ~/.ssh/id_ed25519.pub
 
-.. image:: images/Ssh/ssh8.jpg
+.. image:: images/Ssh/ssh_8.jpg
  
 7. Repository klónozás. Githubon az egyik repository-nál válasszuk ki az ssh fült és másoljuk ki a szöveget, majd a megfelelő paranccsal hajtsuk végre a klónozást.
 
