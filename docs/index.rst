@@ -16,3 +16,4 @@ Szakmai Gyakorlat
    chapters/Hasznalati_esetek
    chapters/Lapok_reszletezese
    chapters/Lapok_kozotti_atmenetek
+   chapters/Adatmodell
