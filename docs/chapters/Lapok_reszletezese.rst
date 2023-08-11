@@ -118,13 +118,6 @@ Sikeres feltöltés (Completed)
 
 Megtörtént a szakdolgozat sikeres feltöltése.
 
-Sikertelen feltöltés (Failed)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. image:: images/Web_pages/Failed.jpg
-
-A szakdolgozat feltöltése sikertelen volt.
-
 Szakdolgozatok státusza (Thesis_Status)
 ---------------------------------------
 
@@ -145,6 +138,11 @@ Szakdolgozat Bírálat (Thesis_Review)
 
 A *Témavezető* és a *Bíráló* itt írhatja meg a bírálatot.
 
+Bírálatok státusza (Report_Status)
+----------------------------------
+
+.. image:: images/Web_pages/Report_Status.jpg
+
 Záróvizsga létrehozása (ZV_Create)
 ----------------------------------
 
@@ -152,19 +150,14 @@ Záróvizsga létrehozása (ZV_Create)
 
 Az *Elnök* itt hozhatja létre a záróvizsgát.
 
-Záróvizsga jegyek rögzítése (ZV_Grade)
---------------------------------------
+Záróvizsga jegyek rögzítése és Záróvizsga jegyzőkönyv letöltése (ZV_Status)
+---------------------------------------------------------------------------
 
-.. image:: images/Web_pages/ZV_Grade.jpg
+.. image:: images/Web_pages/ZV_Status.jpg
 
-A *Jegyző* az *Elnök* és a *Témavezető* itt rögzítheti a Záróvizsgán kapott érdemjegyeket.
+- A *Jegyző* az *Elnök* és a *Témavezető* itt rögzítheti a Záróvizsgán kapott érdemjegyeket.
 
-Záróvizsga jegyzőkönyv letöltése (ZV_Report)
---------------------------------------------
-
-.. image:: images/Web_pages/ZV_Report.jpg    
-
-A felhasználók innen tölthetik le a jegyzőkönyvet.
+- A felhasználók innen tölthetik le a jegyzőkönyvet.
 
 Saját profil [Hallgató] (My_Profile_Student)
 --------------------------------------------
@@ -173,10 +166,10 @@ Saját profil [Hallgató] (My_Profile_Student)
 
 A Hallgató saját profilja látható a megadott adatok alapján.
 
-Saját profil [A töbi szerepkörre] (My_Profile_Chief)
+Saját profil [A többi szerepkörre] (My_Profile)
 ----------------------------------------------------
 
-.. image:: images/Web_pages/My_Profile_Chief.jpg
+.. image:: images/Web_pages/My_Profile.jpg
 
 Az *Elnök*, *Bíráló*, *Jegyző*, *Témavezető* saját profilja látható a megadott adatok alapján.    
 
@@ -194,10 +187,10 @@ Történetiséget leíró lap [Hallgató] (History_Student)
 
 Egy történetiséget leíró lap látható, amin az egész szakdolgozat procedúra figyelhető meg.
 
-Történetiséget leíró lap [Többi szerepkör] (History_Chief)
+Történetiséget leíró lap [Többi szerepkör] (History)
 ----------------------------------------------------------
 
-.. image:: images/Web_pages/History_Chief.jpg
+.. image:: images/Web_pages/History.jpg
 
 Egy történetiséget leíró lap látható, amin az egész szakdolgozat procedúra figyelhető meg.
 
