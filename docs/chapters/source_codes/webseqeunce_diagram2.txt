@@ -8,23 +8,24 @@ participant Bíráló as B
 E->H: Felkérés regisztrációra
 Hallgató->Elnök: Sikeres regisztráció
 Elnök->Témavezető: Felkérés bírálatra
-Témavezető->Bíráló: Felkérés bírálatra
 
 loop Több bíráló
+    Témavezető->Bíráló: Felkérés bírálatra
     alt Felkérés elfogadva
         note left of B 
         Elfogadva
         end note
+        Bíráló->Témavezető: Elfogadva
+        note right of T 
+        Visszajelzés a bírálótól
+        end note
+        Bíráló->Témavezető: Bírálat
+        T -> E: Bírálat
+        T -> H: Bírálat
     else Felkérés visszautasítva
         note left of B 
         Visszautasítva
         end note
+        Bíráló->Témavezető: Visszautasítva
     end
 end
-
-note right of T 
-Visszajelzés a bírálókról
-end note
-
-T -> E: Bírálat
-B -> E: Bírálat
