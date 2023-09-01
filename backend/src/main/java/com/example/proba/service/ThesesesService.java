@@ -7,6 +7,8 @@ import com.example.proba.entity.Theseses;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ThesesesService {
     @Autowired
@@ -36,5 +38,9 @@ public class ThesesesService {
         thesesesTest.setSupplementId(1);
         thesesesTest.setThesisPdfId(1);
         thesesesDao.save(thesesesTest);
+    }
+
+    public List<Theseses> getThesesList() {
+        return (List<Theseses>) thesesesDao.findAll();
     }
 }

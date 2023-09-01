@@ -67,16 +67,38 @@
     Nyelv:
     <input type="text" name="language">
     A védés pontszáma:
-    <input type="text" name="defenseScore">
+    <input type="number" name="defenseScore">
     A tárgyra kapott pontszám:
-    <input type="text" name="subjectScore">
+    <input type="number" name="subjectScore">
     A végső pontszám:
-    <input type="text" name="finalScore">
+    <input type="number" name="finalScore">
 
     <!--
     <input type="text" name="paramGackenden">
     -->
     <input type="submit">
+</form>
+
+<form action="/probaUpload" method="post" enctype="multipart/form-data">
+
+    Fájl feltöltés:
+    <input type="file" name="file">
+
+
+    <input type="submit">
+
+
+</form>
+
+<form action="/probaMessage" method="post" enctype="multipart/form-data">
+
+    Üzenet küldés:
+    <input type="file" name="file">
+
+
+    <input type="submit">
+
+
 </form>
 
 

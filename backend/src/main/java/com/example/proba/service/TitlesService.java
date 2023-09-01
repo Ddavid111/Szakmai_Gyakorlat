@@ -34,4 +34,13 @@ public class TitlesService {
 
     }
 
+    public List <Titles> collect() {
+
+        return (List<Titles>) titlesDao.findAll();
+
+
+    }
+
+
+
 }

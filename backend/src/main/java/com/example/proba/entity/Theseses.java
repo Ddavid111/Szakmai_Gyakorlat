@@ -18,14 +18,6 @@ public class Theseses {
     @JoinColumn(name = "semesterId")
     Semesters semesters;
 
-    public Semesters getSemesters() {
-        return semesters;
-    }
-
-    public void setSemesters(Semesters semesters) {
-        this.semesters = semesters;
-    }
-
     private Integer studentId;
     private Integer supervisorId;
     private String title;
@@ -54,6 +46,14 @@ public class Theseses {
     public void setSemesterId(Integer semesterId) {
         this.semesterId = semesterId;
     }*/
+
+    public Semesters getSemesters() {
+        return semesters;
+    }
+
+    public void setSemesters(Semesters semesters) {
+        this.semesters = semesters;
+    }
 
     public Integer getStudentId() {
         return studentId;

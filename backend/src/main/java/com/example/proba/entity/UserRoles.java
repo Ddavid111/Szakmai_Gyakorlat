@@ -37,7 +37,8 @@ public class UserRoles {
     public void setRoles(Role roles) {
         this.roles = roles;
     }
-/*public Integer getUserId() {
+
+    /*public Integer getUserId() {
         return userId;
     }
 

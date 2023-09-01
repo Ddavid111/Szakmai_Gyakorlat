@@ -8,7 +8,7 @@ import jakarta.persistence.Id;
 import java.util.Date;
 
 @Entity
-public class Files {
+public class File {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;

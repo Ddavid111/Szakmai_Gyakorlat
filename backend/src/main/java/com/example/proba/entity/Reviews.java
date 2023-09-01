@@ -22,17 +22,8 @@ public class Reviews {
     @JoinColumn(name = "thesisId")
     Theseses theseses;
 
-    public Theseses getTheseses() {
-        return theseses;
-    }
-
-    public void setTheseses(Theseses theseses) {
-        this.theseses = theseses;
-    }
-
     //private Integer thesisId;
     private Date invitationDate;
-
     private Integer Score;
     private String description;
     private String city;
@@ -54,6 +45,14 @@ public class Reviews {
 
     public void setReviewerId(Integer reviewerId) {
         this.reviewerId = reviewerId;
+    }
+
+    public Theseses getTheseses() {
+        return theseses;
+    }
+
+    public void setTheseses(Theseses theseses) {
+        this.theseses = theseses;
     }
 
     /*public Integer getThesisId() {

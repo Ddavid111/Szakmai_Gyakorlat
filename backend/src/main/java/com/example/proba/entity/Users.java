@@ -20,6 +20,14 @@ public class Users {
 
     /*@OneToMany(mappedBy = "reviews")
     Set<Reviews> reviews;*/
+    
+    private String email;
+    private String password;
+    private Integer title;
+    private String firstName;
+    private String familyName;
+    private LocalDate birthday;
+    //sql-es datet importáld!!!
 
     @Override
     public String toString() {
@@ -35,13 +43,6 @@ public class Users {
                 '}';
     }
 
-    private String email;
-    private String password;
-    private Integer title;
-    private String firstName;
-    private String familyName;
-    private LocalDate birthday;
-    //sql-es datet importáld!!!
 
     public Integer getId() {
         return id;

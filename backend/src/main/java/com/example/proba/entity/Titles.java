@@ -11,7 +11,15 @@ public class Titles {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-private String name;
+    private String name;
+
+    @Override
+    public String toString() {
+        return "Titles{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
 
     public Integer getId() {
         return id;

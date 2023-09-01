@@ -1,11 +1,14 @@
 package com.example.proba.controller;
 
+import com.example.proba.entity.Titles;
 import com.example.proba.service.*;
+import jakarta.mail.MessagingException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -33,6 +36,9 @@ public class WebController {
 
     @Autowired
     private ThesesesService thesesesService;
+
+    @Autowired
+    private EmailSenderService emailSenderService;
 
     @GetMapping("/")
     public String showIndexPage()
@@ -93,11 +99,32 @@ public class WebController {
         thesesesService.testInit(title,faculty,department,speciality,language,defenseScore,subjectScore,finalScore);
         return "proba";
     }
+    @GetMapping("/proba4")
+    public String collection(){
+        for (Titles titles : titlesService.collect()) {
+            System.out.println(titles);
+        }
+        return "proba";
+    }
+    @PostMapping("/probaUpload")
+    public String uploadFile(@RequestParam("file") MultipartFile file)
+    {
+        fileService.uploadFile(file);
+
+        return "proba";
+
+    }
+
+    @PostMapping("/probaMessage")
+    public String sendEmailMessage() throws MessagingException {
+        this.emailSenderService.sendEmail("zalman2020201@gmail.com","Hello There","Remélhetőleg sikerült","D://num_feladatok.pdf");
+
+        return "Message sent succesfull";
 
 
 
 
-
+    }
 
 
 
