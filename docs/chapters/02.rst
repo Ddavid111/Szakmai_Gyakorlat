@@ -47,10 +47,18 @@ Szerepkörök leírása
 
 Folyamat ábrázolása
 -------------------
+.. plantuml::
 
-.. image:: images/Szekvenciadiagramok/Biralati_folyamat.jpg
+    @startuml
+    title Bírálati folyamat (optimista eset)
 
-.. literalinclude:: source_codes/webseqeunce_diagram1.txt
+    Elnök->Hallgató: Felkérés regisztrációra
+    Hallgató->Elnök: Sikeres reg.
+    Elnök->Témavezető: Felkérés bírálatra
+    Témavezető->Bíráló: Felkérés bírálatra
+    Bíráló->Elnök: Bírálat
+    Témavezető->Elnök: Bírálat
+    @enduml
 
 **Leírás**
 
@@ -68,10 +76,40 @@ A rendszer célja, hogy hatékonyan kezelje a szakdolgozatok *Bírálati Folyama
  
 #. *Témavezető elküldi a bírálatot az Elnöknek:* A *Témavezető* szintén elkészíti a saját bírálatát a szakdolgozatról, és azt az *Elnöknek* küldi el. Ez a lépés lehetővé teszi, hogy mind a *Témavezető*, mind a *Bíráló* észrevételeit összevetve az *Elnök* döntést hozzon a szakdolgozattal kapcsolatban.
 
+.. plantuml::
 
-.. image:: images/Szekvenciadiagramok/Tobbszoros_Biraloi_Felkeres.jpg
+    @startuml
+    title Többszörös bírálói felkérés folyamata
 
-.. literalinclude:: source_codes/webseqeunce_diagram2.txt
+    participant Elnök as E
+    participant Hallgató as H
+    participant Témavezető as T
+    participant Bíráló as B
+
+    E->H: Felkérés regisztrációra
+    H->E: Sikeres regisztráció
+    E->T: Felkérés bírálatra
+    T->B: Felkérés bírálatra
+
+    loop Több bíráló
+        alt Felkérés elfogadva
+            note left of B 
+            Elfogadva
+            end note
+        else Felkérés visszautasítva
+            note left of B 
+            Visszautasítva
+            end note
+        end
+    end
+
+    note right of T 
+    Visszajelzés a bírálókról
+    end note
+
+    T -> E: Bírálat
+    B -> E: Bírálat
+    @enduml
 
 **Leírás**
 
@@ -95,10 +133,56 @@ Ez a szekvenciadiagram lépésről lépésre bemutatja a *Többszörös Bírál�
 
 #. *Témavezető elküldi a bírálatot az Elnöknek:* A *Témavezető* szintén elkészíti a saját bírálatát a szakdolgozatról, és azt az *Elnöknek* küldi el. Ez a lépés lehetővé teszi, hogy mind a *Témavezető*, mind a *Bíráló* észrevételeit összevetve az *Elnök* döntést hozzon a szakdolgozattal kapcsolatban.
 
+.. plantuml::
+    
+    @startuml
+    title Hallgatók felvitele - Szekvenciadiagram
 
-.. image:: images/Szekvenciadiagramok/Hallgatok_Felvitele.jpg
+    participant Elnök as E
+    participant Hallgató as H
+    participant Jegyző as J
 
-.. literalinclude:: source_codes/webseqeunce_diagram3.txt
+    note over E
+    Hallgató adatok megadása
+    end note
+    note over E
+    Adatok ellenőrzése és validáció
+    end note
+
+    E->>H: Felvételre kerültél!
+    
+    note over H 
+    Belépés a rendszerbe
+    end note
+    
+    note over H 
+    Adatlap kitöltése
+    end note
+    
+    H-->J: Új adatlap
+    
+    note over J 
+    Új adatlap érkezett
+    end note
+    
+    note over J 
+    Adatlap ellenőrzése
+    end note
+    
+    Jegyző->>Hallgató: Visszajelzés (ha szükséges)
+    
+    note over J 
+    Adatlap jóváhagyása
+    end note
+    
+    note over J 
+    Jóváhagyott adatok rögzítése
+    end note
+    
+    J-->>E: Adatlap jóváhagyva értesítés
+    
+    E-->>Hallgató: Adatlap jóváhagyva értesítés
+    @enduml
 
 **Leírás**
 
