@@ -169,7 +169,7 @@ Ez a szekvenciadiagram lépésről lépésre bemutatja a *Többszörös Bírál�
     Adatlap ellenőrzése
     end note
     
-    Jegyző->>Hallgató: Visszajelzés (ha szükséges)
+    J->>H: Visszajelzés (ha szükséges)
     
     note over J 
     Adatlap jóváhagyása
@@ -181,7 +181,7 @@ Ez a szekvenciadiagram lépésről lépésre bemutatja a *Többszörös Bírál�
     
     J-->>E: Adatlap jóváhagyva értesítés
     
-    E-->>Hallgató: Adatlap jóváhagyva értesítés
+    E-->>H: Adatlap jóváhagyva értesítés
     @enduml
 
 **Leírás**
