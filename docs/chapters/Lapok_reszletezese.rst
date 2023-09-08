@@ -63,6 +63,11 @@ Az Elküld gomb megnyomása után az alábbi üzenetek egyike jelenik meg.
 
 Sikeres e-mail küldés után a szövegbeviteli mező és a gomb eltűnik.
 
+Hallgatók felvitele (Enrollment_of_students)
+--------------------------------------------
+
+.. image:: images/Web_pages/Enrollment_of_students.png
+
 Szakdolgozatok listázása (Thesis_List)
 --------------------------------------
 
@@ -150,20 +155,35 @@ Záróvizsga létrehozása (ZV_Create)
 
 Az *Elnök* itt hozhatja létre a záróvizsgát.
 
-Záróvizsga jegyzőkönyv szerkesztése (ZV_Report)
------------------------------------------------
+Záróvizsga jegyzőkönyv szerkesztése (ZV_Report1,ZV_Report2,ZV_Report3,ZV_Report4)
+---------------------------------------------------------------------------------
 
-.. image:: images/Web_pages/ZV_Report1.png
-.. image:: images/Web_pages/ZV_Report2.png
-.. image:: images/Web_pages/ZV_Report3.png
-.. image:: images/Web_pages/ZV_Report4.png
+Első lap
+^^^^^^^^
+
+.. image:: images/Web_pages/Zv_Report1.png
+
+Második lap
+^^^^^^^^^^^
+
+.. image:: images/Web_pages/Zv_Report2.png
+
+Harmadik lap
+^^^^^^^^^^^^
+
+.. image:: images/Web_pages/Zv_Report3.png
+
+Negyedik lap
+^^^^^^^^^^^^
+
+.. image:: images/Web_pages/Zv_Report4.png
 
 A záróvizsga jegyzőkönyv szerkesztése látható itt. Pirossal azok a részek vannak kiemelve, amelyeket módosítani lehet.
 
 Záróvizsga jegyek rögzítése és Záróvizsga jegyzőkönyv letöltése (ZV_Status)
 ---------------------------------------------------------------------------
 
-.. image:: images/Web_pages/ZV_Status.png
+.. image:: images/Web_pages/Zv_Status.png
 
 - A *Jegyző* az *Elnök* és a *Témavezető* itt rögzítheti a Záróvizsgán kapott érdemjegyeket.
 
