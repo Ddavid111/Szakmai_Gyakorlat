@@ -45,12 +45,6 @@ Szerepkörök leírása
 - A bírálók és a bizottság értékeléseinek megtekintése.
 - A végső értékelés és jegy rögzítése a rendszerben.
 
-6. *Záróvizsga tag*:
-
-- Lehetősége van a szakdolgozatok, bírálatok és az összesítő táblázat megtekintéséhez.
-- Hozzáférése van a Záróvizsga létrehozásához.
-- A végső értékelés rögzítése a rendszerben.
-
 
 Folyamat ábrázolása
 -------------------

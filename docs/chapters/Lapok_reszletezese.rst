@@ -230,3 +230,10 @@ Prezentáció feltöltés (Presentation_Upload)
 .. image:: images/Web_pages/Presentation_Upload.jpg
 
 A Záróvizsgához szükséges prezentáció feltöltés itt történik meg.
+
+Felhasználói adatok módosítása
+------------------------------
+
+.. image:: images/Web_pages/User_Modifiactions.png
+
+A felhasználói adatokat illetve jogosultságokat lehet módosítani ezen a lapon.

@@ -109,6 +109,7 @@ html_sidebars = {
     ]
 }
 
+plantuml = 'java -jar C:/Users/drig6/Szakdolgozat_Demo_Save/docs/chapters/source_codes'
 
 # -- Options for HTMLHelp output ------------------------------------------
 
