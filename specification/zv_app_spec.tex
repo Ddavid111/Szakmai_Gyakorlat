@@ -34,18 +34,34 @@
 \begin{document}
 
 \begin{center}
-	{\Large \textbf{Szakdolgozat bírálati folyamat és Záróvizsga menedzselő webalkalmazás - Specifikáció}}
-
-	\bigskip
-	
-	{\large Drig Dávid}
+	{\huge
+		\textbf{SPECIFIKÁCIÓ}
+		\vskip 3cm
+		\textbf{Szakdolgozat bírálati folyamat és \\ Záróvizsga menedzselő webalkalmazás}
+		\vskip 1cm
+		Drig Dávid		
+	}
+	\vskip 12cm
+	{\large
+		\textit{Miskolc, \today}
+	}
 \end{center}
+
+\pagestyle{empty}
+
+\newpage
 
 \tableofcontents
 
+\newpage
+
+\pagestyle{plain}
+
+\setcounter{page}{1}
+
 \section{Bevezetés}
 
-A dokumentum az elkészítendő webalkalmazás specifikációját tartalmazza.
+A dokumentum a Programtervező informatikus BSc-s hallgatók szakdolgozatainak bírálati folyamatát segítő, továbbá a Záróvizsgához kötődő adatokat kezelő webalkalmazás specifikációját tartalmazza.
 
 \section{Szerepkörök}
 
@@ -61,7 +77,6 @@ A következő szakaszok a rendszer szereplőit, az általuk elérhető funkciók
 \subsection{Hallgató}
 
 A hallgató, aki be szeretné nyújtani a szakdolgozatát, meg szeretné védeni, és záróvizsgázni szeretne.
-
 \begin{itemize}
 \item Szakdolgozat létrehozása, szerkesztése és mentése a rendszerben.
 \item Az elkészült dolgozat benyújtása a rendszeren keresztül.
@@ -74,7 +89,6 @@ A hallgató, aki be szeretné nyújtani a szakdolgozatát, meg szeretné védeni
 \subsection{Bíráló}
 
 A szakdolgozat szakmai elbírálására felkért külső bíráló.
-
 \begin{itemize}
 	\item A dolgozat értékelése és visszajelzés küldése a hallgatónak.
 	\item A dolgozat nyomon követése és annak státuszának frissítése a rendszerben.
@@ -84,7 +98,6 @@ A szakdolgozat szakmai elbírálására felkért külső bíráló.
 \subsection{Jegyző}
 
 A Záróvizsga jegyzője.
-
 \begin{itemize}
 	\item A záróvizsga időpontjának és helyszínének meghatározása és frissítése.
 	\item A záróvizsga résztvevőinek (hallgató, bírálók, bizottság) értesítése és meghívók kiküldése.
@@ -94,7 +107,6 @@ A Záróvizsga jegyzője.
 \subsection{Elnök}
 
 Záróvizsga bizottság elnöke:
-
 \begin{itemize}
 	\item A bizottság tagjainak kijelölése és módosítása.
 	\item A záróvizsga menetének és a kérdéseknek meghatározása.
@@ -105,7 +117,6 @@ Záróvizsga bizottság elnöke:
 \subsection{Témavezető}
 
 A szakdolgozat témavezetője. (A konzulens a rendszerben csak névlegesen szerepel. Nem külön szerepkör.)
-
 \begin{itemize}
 	\item A hallgatóval való kommunikáció és támogatás a szakdolgozat elkészítése során.
 	\item A hallgató dolgozatának nyomon követése és visszajelzések küldése.
@@ -119,7 +130,7 @@ A következő szakaszokban a bírálati folyamat részletezését láthatjuk kü
 
 \subsection{Optimista eset}
 
-A rendszer célja, hogy hatékonyan kezelje a szakdolgozatok Bírálati Folyamatát és a kapcsolódó érintett szereplők közötti kommunikációt. 
+A rendszer célja, hogy hatékonyan kezelje a szakdolgozatok bírálati folyamatát és a kapcsolódó érintett szereplők közötti kommunikációt. 
 
 \begin{figure}
 \centering
@@ -143,15 +154,10 @@ Témavezető->Elnök: Bírálat
 \Aref{fig:review-optimistic}. ábrán a leírás az alábbi lépéseket foglalja össze:
 \begin{enumerate}
 \item Elnök felkéri a Hallgatót a regisztrációra: A folyamatot az Elnök indítja, amikor felkéri a Hallgatót, hogy regisztráljon a rendszerbe. Ez a lépés azt jelenti, hogy a Hallgatónak lehetősége van hozzáférni a szakdolgozat bírálati folyamatához.
-
 \item Hallgató sikeresen regisztrál: A Hallgató sikeresen regisztrál a rendszerbe, és így jogosultá válik a szakdolgozatának bírálati folyamatára.
-
 \item Elnök felkéri a Témavezetőt a bírálatra: Az Elnök felkéri a Témavezetőt, hogy végezze el a szakdolgozat bírálatát. Ez a lépés azt jelzi, hogy a Témavezetőnek feladata van értékelni és észrevételeket tenni a szakdolgozatról.
-
 \item Témavezető felkéri a Bírálót a bírálatra: A Témavezető felkéri a Bírálót, hogy részt vegyen a szakdolgozat bírálatában. A Bíráló feladata a szakdolgozat objektív értékelése és véleményezése.
-
 \item Bíráló elküldi a bírálatot az Elnöknek: A Bíráló elkészíti a bírálatát a szakdolgozatról, és elküldi azt az Elnöknek. Ez a lépés azt jelenti, hogy a Bíráló megosztja az észrevételeit és értékelését a szakdolgozatról a rendszer adminisztrátorával.
-
 \item Témavezető elküldi a bírálatot az Elnöknek: A Témavezető szintén elkészíti a saját bírálatát a szakdolgozatról, és azt az Elnöknek küldi el. Ez a lépés lehetővé teszi, hogy mind a Témavezető, mind a Bíráló észrevételeit összevetve az Elnök döntést hozzon a szakdolgozattal kapcsolatban.
 \end{enumerate}
 
@@ -201,24 +207,15 @@ B -> E: Bírálat
 \end{figure}
 
 A leírás (\ref{fig:review-multiple}. ábra) az alábbi lépéseket foglalja össze:
-
 \begin{enumerate}
 \item Felkérés a regisztrációra: A folyamatot az Elnök indítja, amikor felkéri a Hallgatót, hogy regisztráljon a rendszerbe. Ez a lépés azt jelenti, hogy a Hallgatónak lehetősége van hozzáférni a szakdolgozat bírálati folyamatához.
-
 \item Hallgató sikeresen regisztrál: A Hallgató sikeresen regisztrál a rendszerbe, és így jogosultá válik a szakdolgozatának bírálati folyamatára.
-
 \item Elnök felkéri a Témavezetőt a bírálatra: Az Elnök felkéri a Témavezetőt, hogy végezze el a szakdolgozat bírálatát. Ez a lépés azt jelzi, hogy a Témavezetőnek feladata van értékelni és észrevételeket tenni a szakdolgozatról.
-
 \item Témavezető felkéri a Bírálót a bírálatra: A Témavezető felkéri a Bírálót, hogy részt vegyen a szakdolgozat bírálatában. A Bíráló feladata a szakdolgozat objektív értékelése és véleményezése.
-
 \item Elfogadás: A Bíráló elfogadja a felkérést, és ezt jelzi.
-
 \item Visszautasítás: A Bíráló visszautasítja a felkérést, és ezt jelzi.
-
 \item Visszajelzés a bírálókról: A Témavezető visszajelzést ad az Elnöknek a bírálók elfogadásáról vagy visszautasításáról.
-
 \item Bíráló elküldi a bírálatot az Elnöknek: A Bíráló elkészíti a bírálatát a szakdolgozatról, és elküldi azt az Elnöknek. Ez a lépés azt jelenti, hogy a Bíráló megosztja az észrevételeit és értékelését a szakdolgozatról a rendszer adminisztrátorával.
-
 \item Témavezető elküldi a bírálatot az Elnöknek: A Témavezető szintén elkészíti a saját bírálatát a szakdolgozatról, és azt az Elnöknek küldi el. Ez a lépés lehetővé teszi, hogy mind a Témavezető, mind a Bíráló észrevételeit összevetve az Elnök döntést hozzon a szakdolgozattal kapcsolatban.
 \end{enumerate}
 
@@ -285,25 +282,15 @@ E-->>H: Adatlap jóváhagyva értesítés
 
 \begin{enumerate}
 \item Hallgató adatok megadása: Az Elnök megadja a Hallgató adatait a rendszerben, hogy felkészüljenek a regisztrációra. Az adatok tartalmazzák a szükséges információkat a Hallgatóról.
-
 \item Adatok ellenőrzése és validáció: Az Elnök ellenőrzi és érvényesíti az adatokat, hogy biztos legyen a hitelességükben és a pontosságukban.
-
 \item Felvételre kerülés értesítése: Az Elnök értesíti a Hallgatót a sikeres felvételről, és arról, hogy részt vehet a folyamatban.
-
 \item Belépés a rendszerbe: A Hallgató belép a rendszerbe a saját fiókjába, hogy folytassa a felvételi folyamatot.
-
 \item Adatlap kitöltése: A Hallgató kitölti az adatlapját a szükséges információkkal.
-
 \item Új adatlap értesítése: A Hallgató elküldi az újonnan kitöltött adatlapot a Jegyzőnek, jelezve a további folyamat kezdetét.
-
 \item Adatlap ellenőrzése: A Jegyző értesül arról, hogy új adatlap érkezett, majd alaposan ellenőrzi az adatokat és a kitöltött információkat.
-
 \item Visszajelzés és jóváhagyás: A Jegyző visszajelzést küld a Hallgatónak az adatlap jóváhagyásáról, és esetleges korrekciókról, ha szükséges.
-
 \item Adatlap jóváhagyása: Miután az adatlapot jóváhagyásra alkalmasnak találták, a Jegyző hivatalosan is jóváhagyja az adatlapot.
-
 \item Értesítés a jóváhagyásról: A Jegyző értesíti az Elnököt az adatlap jóváhagyásáról és a felvétel sikerességéről.
-
 \item Adatlap jóváhagyásának értesítése a Hallgatónak: Az Elnök értesíti a Hallgatót az adatlap jóváhagyásáról és a felvétel megerősítéséről.
 \end{enumerate}
 
@@ -320,33 +307,26 @@ A folyamatábra bemutatja a szakdolgozat bírálat feltöltésének folyamatát 
 
 \begin{enumerate}
 \item A Témavezető és a Bíráló bejelentkezik: A Témavezető és a Bíráló is bejelentkezik a rendszerbe, hogy hozzáférjenek a szükséges funkciókhoz.
-
 \item Témavezető kilistázza és kiválasztja a Bírálót: A Témavezető megjeleníti a rendszerben elérhető Bírálók listáját és a Témavezető kiválasztja a Bírálót.
-
 \item Felhasználók kiválasztják a szakdolgozatot: Mind a Témavezető, mind a Bíráló kiválasztja a szakdolgozatot, amelyre a bírálatot el szeretné készíteni.
-
 \item A Felhasználók megírják a bírálatot: Mind a Témavezető, mind a Bíráló megírja a bírálatot.
-
 \item Bírálat mentése és feldolgozása a rendszerben: A rendszer elmenti és feldolgozza a feltöltött bírálatot.
-
 \item Rendszer ellenőrzi, hogy a bírálat PDF formátumban van és érvényes-e: A rendszer ellenőrzi, hogy a bírálat valóban PDF formátumban van-e és érvényes-e.
-
 \item Rendszer előnézetet készít a bírálatból: A rendszer előnézetet készít a bírálatból, hogy a Témavezető és a Bíráló ellenőrizhesse a dokumentumot.
-
 \item Témavezető szerkeszti a bírálatot (szükség esetén): A Témavezető lehetősége van szerkeszteni a bírálatot, ha szükségesnek látja.
-
 \item Bíráló szerkeszti a bírálatot (szükség esetén): A Bírálónak is lehetősége van szerkeszteni a bírálatot, ha szükségesnek tartja.
-
 \item Bírálat véglegesítése és mentése a rendszerben: A Témavezető és a Bíráló véglegesíti a szerkesztéseket, majd a rendszer elmenti a végleges bírálatot.
-
 \item Visszajelzés a rendszerben a Témavezetőnek és a Bírálónak: A rendszer visszajelzést küld mind a Témavezetőnek, mind a Bírálónak arról, hogy a bírálatuk sikeresen rögzítésre került.
-
 \item Témavezető és a Bíráló megtekinti a bírálatot: Végül mind a Témavezető, mind a Bíráló megtekinti a véglegesített bírálatot a rendszerben.
 \end{enumerate}
 
 \section{Lapok részletezése}
 
-\subsection{Bejelentkezés (Login)}
+A következő szakaszokban a tervezett webalkalmazás felhasználói felületének elemei lapokra bontva láthatóak.
+
+\subsection{Bejelentkezés}
+
+Gyakorlatilag minden elvégezhető művelethez bejelentkezés szükséges. Ehhez a bejelentkező felület terve \aref{fig:Login}. ábrán látható.
 
 \begin{figure}
 	\centering
@@ -369,7 +349,9 @@ Lehetséges hibaüzenetek:
 
 Sikeres bejelentkezés után megnyílik a felhasználó irányítópult-oldala.
 
-\subsection{Regisztráció (Registration)}
+\subsection{Regisztráció}
+
+A regisztrációs felület \aref{fig:Registration}. ábrán látható.
 
 \begin{figure}
 	\centering
@@ -396,7 +378,9 @@ Lehetséges hibaüzenetek:
 
 Sikeres regisztráció után megnyílik a felhasználó irányítópult-oldala.
 
-\subsection{Elfelejtett jelszó (Forgotten\_Password)}
+\subsection{Elfelejtett jelszó}
+
+Elfelejtett jelszó igényléséhez \aref{fig:Forgotten_Password}. ábrán látható felület áll rendelkezésre.
 
 \begin{figure}
 	\centering
@@ -405,18 +389,19 @@ Sikeres regisztráció után megnyílik a felhasználó irányítópult-oldala.
 	\label{fig:Forgotten_Password}
 \end{figure}
 
-Az Elküld gomb megnyomása után az alábbi üzenetek egyike jelenik meg.
-
+Az \textit{Elküld} gomb megnyomása után az alábbi üzenetek egyike jelenik meg.
 \begin{itemize}
 	\item Egy e-mailt küldtünk a sample@address.com e-mail címre.
 	\item Az e-mail cím formátuma érvénytelen!
 	\item A sample@address.com e-mail cím nincs regisztrálva a Szerkesztői rendszerben.
-	\item Hiba történt, miközben a rendszer megpróbálta elküldeni az e-mailt. Kérjük, próbálja újra később.
+	\item Hiba történt, miközben a rendszer megpróbálta elküldeni az e-mailt. Kérjük, próbálja újra később!
 \end{itemize}
 
 Sikeres e-mail küldés után a szövegbeviteli mező és a gomb eltűnik.
 
-\subsection{Hallgatók felvitele (Enrollment\_of\_students)}
+\subsection{Hallgatók felvitele}
+
+A hallgatók felviteléhez tartozó felület \aref{fig:Enrollment_of_students}. ábrán látható.
 
 \begin{figure}
 	\centering
@@ -425,7 +410,9 @@ Sikeres e-mail küldés után a szövegbeviteli mező és a gomb eltűnik.
 	\label{fig:Enrollment_of_students}
 \end{figure}
 
-\subsection{Szakdolgozatok listázása (Thesis\_List)}
+\subsection{Szakdolgozatok listázása}
+
+A szakdolgozatok \aref{fig:Thesis_List}. ábrán látható formában listázhatóak.
 
 \begin{figure}
 	\centering
@@ -435,12 +422,11 @@ Sikeres e-mail küldés után a szövegbeviteli mező és a gomb eltűnik.
 \end{figure}
 
 A weblap a szakdolgozatok listázását mutatja.
-
 \begin{itemize}
 	\item A hiba üzenet akkor jelenik meg ha a felhaszáló nem ad meg adatot illetve ha a felhasználó téves adatokat ad meg.
 \end{itemize}
 
-\subsubsection{Szakdolgozat részletei (Thesis\_Details)}
+\subsubsection{Szakdolgozat részletei}
 
 \begin{figure}
 	\centering
@@ -449,13 +435,15 @@ A weblap a szakdolgozatok listázását mutatja.
 	\label{fig:Thesis_Details}
 \end{figure}
 
-A weblap egy adott szakdolgozat részleteit jeleníti meg. A lapot a *Szakdolgozatok listázása* lapból érhetjük el. 
+A weblap egy adott szakdolgozat részleteit jeleníti meg (\ref{fig:Thesis_Details}. ábra). A lapot a \textit{Szakdolgozatok listázása} lapból érhetjük el. 
 
 \subsection{Szakdolgozat feltöltése}
 
 A folyamat több lapból áll melyek átsegítik a felhasználót a szakdolgozat feltöltésében.
 
-\subsubsection{Alapadatok (Title\_Settings)}
+\subsubsection{Alapadatok}
+
+Az alapadatok beállításához tartozó lap \aref{fig:Title_Settings}. ábrán látható.
 
 \begin{figure}
 	\centering
@@ -470,7 +458,9 @@ Lehetséges hibaüzenetek:
 	\item Mielőtt tovább lépsz kérlek mentsd az oldalt.
 \end{itemize}
 
-\subsubsection{PDF Feltöltés (PDF\_Upload)}
+\subsubsection{PDF Feltöltés}
+
+PDF fájlok feltöltése (\ref{fig:PDF_Upload}. ábra).
 
 \begin{figure}
 	\centering
@@ -481,11 +471,13 @@ Lehetséges hibaüzenetek:
 
 Lehetséges hibaüzenetek:
 \begin{itemize}
-	\item A fájl mérete túl nagy
-	\item A fájl nem a megfelelő formátumban van
+	\item A fájl mérete túl nagy.
+	\item A fájl nem a megfelelő formátumban van.
 \end{itemize}
 
-\subsubsection{Előnézet (Preview)}
+\subsubsection{Előnézet}
+
+Feltöltés előtti előnézet (\ref{fig:Preview}. ábra).
 
 \begin{figure}
 	\centering
@@ -494,7 +486,9 @@ Lehetséges hibaüzenetek:
 	\label{fig:Preview}
 \end{figure}
 
-\subsubsection{Sikeres feltöltés (Completed)}
+\subsubsection{Sikeres feltöltés}
+
+Szakdolgozat sikeres feltöltése (\ref{fig:Completed}. ábra).
 
 \begin{figure}
 	\centering
@@ -505,7 +499,7 @@ Lehetséges hibaüzenetek:
 
 Megtörtént a szakdolgozat sikeres feltöltése.
 
-\subsection{Szakdolgozatok státusza (Thesis\_Status)}
+\subsection{Szakdolgozatok státusza}
 
 \begin{figure}
 	\centering
@@ -514,15 +508,15 @@ Megtörtént a szakdolgozat sikeres feltöltése.
 	\label{fig:Thesis_Status}
 \end{figure}
 
-A szakdolgozatok státuszáról egy összefoglaló táblázat látható.
+A szakdolgozatok státuszáról egy összefoglaló táblázat látható (\ref{fig:Thesis_Status}. ábra).
 
 Lehetséges hibaüzenetek:
 \begin{itemize}
-	\item Nem adtál meg adatot
-	\item Nincs találat
+	\item Nem adtál meg adatot!
+	\item Nincs találat!
 \end{itemize}
 
-\subsection{Szakdolgozat Bírálat (Thesis\_Review)}
+\subsection{Szakdolgozat Bírálat}
 
 \begin{figure}
 	\centering
@@ -531,9 +525,11 @@ Lehetséges hibaüzenetek:
 	\label{fig:Thesis_Review}
 \end{figure}
 
-A *Témavezető* és a *Bíráló* itt írhatja meg a bírálatot.
+A Témavezető és a Bíráló itt írhatja meg a bírálatot (\ref{fig:Thesis_Review}. ábra).
 
-\subsection{Bírálatok státusza (Report\_Status)}
+\subsection{Bírálatok státusza}
+
+Bírálatok státusza (\ref{fig:Report_Status}. ábra).
 
 \begin{figure}
 	\centering
@@ -542,7 +538,7 @@ A *Témavezető* és a *Bíráló* itt írhatja meg a bírálatot.
 	\label{fig:Report_Status}
 \end{figure}
 
-\subsection{Záróvizsga létrehozása (ZV\_Create)}
+\subsection{Záróvizsga létrehozása}
 
 \begin{figure}
 	\centering
@@ -551,13 +547,13 @@ A *Témavezető* és a *Bíráló* itt írhatja meg a bírálatot.
 	\label{fig:ZV_Create}
 \end{figure}
 
-Az *Elnök* itt hozhatja létre a záróvizsgát.
+Az Elnök itt hozhatja létre a záróvizsgát.
 
 \subsection{Záróvizsga jegyzőkönyv szerkesztése}
 
 %(ZV_Report1,ZV_Report2,ZV_Report3,ZV_Report4)
 
-Első lap
+Első lap (\ref{fig:Zv_Report1}. ábra)
 
 \begin{figure}
 	\centering
@@ -566,7 +562,7 @@ Első lap
 	\label{fig:Zv_Report1}
 \end{figure}
 
-Második lap
+Második lap (\ref{fig:Zv_Report2}. ábra)
 
 \begin{figure}
 	\centering
@@ -575,7 +571,7 @@ Második lap
 	\label{fig:Zv_Report2}
 \end{figure}
 
-Harmadik lap
+Harmadik lap (\ref{fig:Zv_Report3}. ábra)
 
 \begin{figure}
 	\centering
@@ -584,7 +580,7 @@ Harmadik lap
 	\label{fig:Zv_Report3}
 \end{figure}
 
-Negyedik lap
+Negyedik lap (\ref{fig:Zv_Report4}. ábra)
 
 \begin{figure}
 	\centering
@@ -597,7 +593,7 @@ A záróvizsga jegyzőkönyv szerkesztése látható itt. Pirossal azok a része
 
 \subsection{Záróvizsga jegyek rögzítése és Záróvizsga jegyzőkönyv letöltése}
 
-%(ZV_Status)
+(\ref{fig:Zv_Status}. ábra)
 
 \begin{figure}
 	\centering
@@ -607,11 +603,11 @@ A záróvizsga jegyzőkönyv szerkesztése látható itt. Pirossal azok a része
 \end{figure}
 
 \begin{itemize}
-	\item A *Jegyző* az *Elnök* és a *Témavezető* itt rögzítheti a Záróvizsgán kapott érdemjegyeket.
+	\item A Jegyző az Elnök és a Témavezető itt rögzítheti a Záróvizsgán kapott érdemjegyeket.
 	\item A felhasználók innen tölthetik le a jegyzőkönyvet.
 \end{itemize}
 
-\subsection{Saját profil [Hallgató] (My\_Profile\_Student)}
+\subsection{Saját profil -- Hallgató}
 
 \begin{figure}
 	\centering
@@ -620,9 +616,9 @@ A záróvizsga jegyzőkönyv szerkesztése látható itt. Pirossal azok a része
 	\label{fig:My_Profile_Student}
 \end{figure}
 
-A Hallgató saját profilja látható a megadott adatok alapján.
+A Hallgató saját profilja látható a megadott adatok alapján (\ref{fig:My_Profile_Student}. ábra).
 
-\subsection{Saját profil [A többi szerepkörre] (My\_Profile)}
+\subsection{Saját profil -- a többi szerepkörre}
 
 \begin{figure}
 	\centering
@@ -631,9 +627,9 @@ A Hallgató saját profilja látható a megadott adatok alapján.
 	\label{fig:My_Profile}
 \end{figure}
 
-Az *Elnök*, *Bíráló*, *Jegyző*, *Témavezető* saját profilja látható a megadott adatok alapján.    
+Az Elnök, Bíráló, Jegyző, Témavezető saját profilja látható a megadott adatok alapján (\ref{fig:My_Profile}. ábra).    
 
-\subsection{Biztonság (Security)}
+\subsection{Biztonság}
 
 \begin{figure}
 	\centering
@@ -642,9 +638,9 @@ Az *Elnök*, *Bíráló*, *Jegyző*, *Témavezető* saját profilja látható a 
 	\label{fig:Security}
 \end{figure}
 
-A jelszó változtatás itt történik meg.
+A jelszó változtatás itt történik meg (\ref{fig:Security.jpg}. ábra).
 
-\subsection{Történetiséget leíró lap [Hallgató] (History\_Student)}
+\subsection{Történetiséget leíró lap -- Hallgató}
 
 \begin{figure}
 	\centering
@@ -653,9 +649,9 @@ A jelszó változtatás itt történik meg.
 	\label{fig:History_Student}
 \end{figure}
 
-Egy történetiséget leíró lap látható, amin az egész szakdolgozat procedúra figyelhető meg.
+Egy történetiséget leíró lap látható, amin az egész szakdolgozat procedúra figyelhető meg (\ref{fig:History_Student}. ábra).
 
-\subsection{Történetiséget leíró lap [Többi szerepkör] (History)}
+\subsection{Történetiséget leíró lap -- többi szerepkör}
 
 \begin{figure}
 	\centering
@@ -664,9 +660,9 @@ Egy történetiséget leíró lap látható, amin az egész szakdolgozat proced�
 	\label{fig:History}
 \end{figure}
 
-Egy történetiséget leíró lap látható, amin az egész szakdolgozat procedúra figyelhető meg.
+Egy történetiséget leíró lap látható, amin az egész szakdolgozat procedúra figyelhető meg (\ref{fig:History}. ábra).
 
-\subsection{Prezentáció feltöltés (Presentation\_Upload)}
+\subsection{Prezentáció feltöltés}
 
 \begin{figure}
 	\centering
@@ -675,7 +671,7 @@ Egy történetiséget leíró lap látható, amin az egész szakdolgozat proced�
 	\label{fig:Presentation_Upload}
 \end{figure}
 
-A Záróvizsgához szükséges prezentáció feltöltés itt történik meg.
+A Záróvizsgához szükséges prezentáció feltöltés itt történik meg (\ref{fig:Presentation_Upload}. ábra).
 
 \subsection{Felhasználói adatok módosítása}
 
@@ -686,7 +682,7 @@ A Záróvizsgához szükséges prezentáció feltöltés itt történik meg.
 	\label{fig:User_Modifiactions}
 \end{figure}
 
-A felhasználói adatokat illetve jogosultságokat lehet módosítani ezen a lapon.
+A felhasználói adatokat illetve jogosultságokat lehet módosítani ezen a lapon (\ref{fig:User_Modifiactions}. ábra).
 
 \section{Lapok közötti átmenetek}
 
@@ -699,16 +695,14 @@ A felhasználói adatokat illetve jogosultságokat lehet módosítani ezen a lap
 	\label{fig:Elnok}
 \end{figure}
 
-**Leírás**
-
-A fenti ábrán az *Elnök* szemszögéből láthatjuk a rendszert. 
+\Aref{fig:Elnok}. ábrán az Elnök szemszögéből láthatjuk a rendszert. 
 \begin{itemize}
-	\item Lehetősége van *Regisztrálni*, *Bejelentkezni*, és *Elfejtett jelszót* kérni. 
+	\item Lehetősége van Regisztrálni, Bejelentkezni, és Elfejtett jelszót kérni. 
 	\item A bejelentkezés után rögtön a főoldalra jut a felhasználó. 
-	\item Innen lehetősége van megtekinteni a *Saját profilját* és ezen belül a *Biztonság* menüpontot, ahol a jelszót tudja megváltoztatni. 
-	\item Ezenkívül hozzáférése lehet a *Szakdolgozatok listázásához* is amin belül az egyes *Szakdolgozatok részleteit* is megjelenítheti a felhasználó. 
-	\item Lehetősége van *Záróvizsgát létrehozni*, a *Záróvizsgán kapott jegyeket* elkönyvelni illetve a *Záróvizsga jegyzőkönyvének letöltésére* is. 
-	\item Megtekintheti a *Szakdolgozatok státuszát*, a *Bírálatokat* és a *Történetisgéet leíró lapot* is.
+	\item Innen lehetősége van megtekinteni a Saját profilját és ezen belül a Biztonság menüpontot, ahol a jelszót tudja megváltoztatni. 
+	\item Ezenkívül hozzáférése lehet a Szakdolgozatok listázásához is amin belül az egyes Szakdolgozatok részleteit is megjelenítheti a felhasználó. 
+	\item Lehetősége van Záróvizsgát létrehozni, a Záróvizsgán kapott jegyeket elkönyvelni illetve a Záróvizsga jegyzőkönyvének letöltésére is. 
+	\item Megtekintheti a Szakdolgozatok státuszát, a Bírálatokat és a Történetisgéet leíró lapot is.
 \end{itemize}
 
 \subsection{Bíráló}
@@ -720,16 +714,14 @@ A fenti ábrán az *Elnök* szemszögéből láthatjuk a rendszert.
 	\label{fig:Biralo}
 \end{figure}
 
-**Leírás**
-
-A fenti ábrán a *Bíráló* szemszögéből láthatjuk a rendszert. 
+\Aref{fig:Biralo}. ábrán a Bíráló szemszögéből láthatjuk a rendszert. 
 
 \begin{itemize}
-	\item Lehetősége van *Regisztrálni*, *Bejelentkezni*, és *Elfejtett jelszót* kérni. 
+	\item Lehetősége van Regisztrálni, Bejelentkezni, és Elfejtett jelszót kérni. 
 	\item A bejelentkezés után rögtön a főoldalra jut a felhasználó. 
-	\item Innen lehetősége van megtekinteni a *Saját profilját* és ezen belül a *Biztonság* menüpontot, ahol a jelszót tudja megváltoztatni. 
-	\item Ezenkívül hozzáférése lehet a *Szakdolgozatok listázásához* is amin belül az egyes *Szakdolgozatok részleteit* is megjelenítheti a felhasználó. 
-	\item Megtekintheti a *Szakdolgozatok státuszát* és a *Történetiséget leíró lapot* is. Valamint bírálatot írhat a *Szakdolgozat Bírálat* lapon. 
+	\item Innen lehetősége van megtekinteni a Saját profilját és ezen belül a Biztonság menüpontot, ahol a jelszót tudja megváltoztatni. 
+	\item Ezenkívül hozzáférése lehet a Szakdolgozatok listázásához is amin belül az egyes Szakdolgozatok részleteit is megjelenítheti a felhasználó. 
+	\item Megtekintheti a Szakdolgozatok státuszát és a Történetiséget leíró lapot is. Valamint bírálatot írhat a Szakdolgozat Bírálat lapon. 
 \end{itemize}
 
 \subsection{Jegyző}
@@ -741,17 +733,15 @@ A fenti ábrán a *Bíráló* szemszögéből láthatjuk a rendszert.
 	\label{fig:Jegyzo}
 \end{figure}
 
-**Leírás**
-
-A fenti ábrán a *Jegyző* szemszögéből láthatjuk a rendszert. 
+\Aref{fig:Jegyzo}. ábrán a Jegyző szemszögéből láthatjuk a rendszert. 
 
 \begin{itemize}
-	\item Lehetősége van *Regisztrálni*, *Bejelentkezni*, és *Elfejtett jelszót* kérni. 
+	\item Lehetősége van Regisztrálni, Bejelentkezni, és Elfejtett jelszót kérni. 
 	\item A bejelentkezés után rögtön a főoldalra jut a felhasználó. 
-	\item Innen lehetősége van megtekinteni a *Saját profilját* és ezen belül a *Biztonság* menüpontot, ahol a jelszót tudja megváltoztatni. 
-	\item Ezenkívül hozzáférése lehet a *Szakdolgozatok listázásához* is, amin belül az egyes *Szakdolgozatok részleteit* is megjelenítheti a felhasználó. 
-	\item Megtekintheti a *Szakdolgozatok státuszát* és a *Történetiséget leíró lapot* is. 
-	\item Lehetősége van a *Záróvizsgán kapott jegyek* rögzítésére illetve a *Záróvizsga jegyzőkönyv* letöltésére. 
+	\item Innen lehetősége van megtekinteni a Saját profilját és ezen belül a Biztonság menüpontot, ahol a jelszót tudja megváltoztatni. 
+	\item Ezenkívül hozzáférése lehet a Szakdolgozatok listázásához is, amin belül az egyes Szakdolgozatok részleteit is megjelenítheti a felhasználó. 
+	\item Megtekintheti a Szakdolgozatok státuszát és a Történetiséget leíró lapot is. 
+	\item Lehetősége van a Záróvizsgán kapott jegyek rögzítésére illetve a Záróvizsga jegyzőkönyv letöltésére. 
 \end{itemize}
 
 \subsection{Témavezető}
@@ -763,17 +753,15 @@ A fenti ábrán a *Jegyző* szemszögéből láthatjuk a rendszert.
 	\label{fig:Temavezeto}
 \end{figure}
 
-**Leírás**
-
-A fenti ábrán a *Témavezető* szemszögéből láthatjuk a rendszert.
+\Aref{fig:Temavezeto}. ábrán a Témavezető szemszögéből láthatjuk a rendszert.
 
 \begin{itemize}
-	\item Lehetősége van *Regisztrálni*, *Bejelentkezni*, és *Elfejtett jelszót* kérni. 
+	\item Lehetősége van Regisztrálni, Bejelentkezni, és Elfejtett jelszót kérni. 
 	\item A bejelentkezés után rögtön a főoldalra jut a felhasználó. 
-	\item Innen lehetősége van megtekinteni a *Saját profilját* és ezen belül a *Biztonság* menüpontot, ahol a jelszót tudja megváltoztatni. 
-	\item Ezenkívül hozzáférése lehet a *Szakdolgozatok listázásához* is, amin belül az egyes *Szakdolgozatok részleteit* is megjelenítheti a felhasználó. 
-	\item Megtekintheti a *Szakdolgozatok státuszát* a *Bírálatot*, és a *Történetiséget leíró lapot* is. 
-	\item Lehetősége van a *Záróvizsgán kapott jegyek* rögzítésére illetve a *Záróvizsga jegyzőkönyv* letöltésére. 
+	\item Innen lehetősége van megtekinteni a Saját profilját és ezen belül a Biztonság menüpontot, ahol a jelszót tudja megváltoztatni. 
+	\item Ezenkívül hozzáférése lehet a Szakdolgozatok listázásához is, amin belül az egyes Szakdolgozatok részleteit is megjelenítheti a felhasználó. 
+	\item Megtekintheti a Szakdolgozatok státuszát a Bírálatot, és a Történetiséget leíró lapot is. 
+	\item Lehetősége van a Záróvizsgán kapott jegyek rögzítésére illetve a Záróvizsga jegyzőkönyv letöltésére. 
 \end{itemize}
 
 \subsection{Hallgató}
@@ -785,21 +773,18 @@ A fenti ábrán a *Témavezető* szemszögéből láthatjuk a rendszert.
 	\label{fig:Hallgato}
 \end{figure}
 
-**Leírás**
-
-A fenti ábrán a *Hallgató* szemszögéből láthatjuk a rendszert. 
+\Aref{fig:Hallgato}. ábrán a Hallgató szemszögéből láthatjuk a rendszert. 
 
 \begin{itemize}
-	\item Lehetősége van *Regisztrálni*, *Bejelentkezni*, és *Elfejtett jelszót* kérni. 
+	\item Lehetősége van Regisztrálni, Bejelentkezni, és Elfejtett jelszót kérni. 
 	\item A bejelentkezés után rögtön a főoldalra jut a felhasználó. 
-	\item Innen lehetősége van megtekinteni a *Saját profilját* és ezen belül a *Biztonság* menüpontot, ahol a jelszót tudja megváltoztatni. 
-	\item Ezenkívül hozzáférése lehet a *Szakdolgozatok listázásához* is, amin belül az egyes *Szakdolgozatok részleteit* is megjelenítheti a felhasználó. 
-	\item Megtekintheti a *Történetiséget leíró lapot* is. 
-	\item Lehetősége van a *Szakdolgozat feltöltésére*, ami különböző fázisokból áll kezdve az *Alapadatok* megadásától a *PDF felöltésen* át az *Előnézetig*. 
-	\item A Záróvizsgára készült *prezentációt* is lehetősége van egy külön lapon feltölteni.
+	\item Innen lehetősége van megtekinteni a Saját profilját és ezen belül a Biztonság menüpontot, ahol a jelszót tudja megváltoztatni. 
+	\item Ezenkívül hozzáférése lehet a Szakdolgozatok listázásához is, amin belül az egyes Szakdolgozatok részleteit is megjelenítheti a felhasználó. 
+	\item Megtekintheti a Történetiséget leíró lapot is. 
+	\item Lehetősége van a Szakdolgozat feltöltésére, ami különböző fázisokból áll kezdve az Alapadatok megadásától a PDF felöltésen át az Előnézetig. 
+	\item A Záróvizsgára készült prezentációt is lehetősége van egy külön lapon feltölteni.
 \end{itemize}
 
-
-\section{Összegzés}
+% \section{Összegzés}
 
 \end{document}
