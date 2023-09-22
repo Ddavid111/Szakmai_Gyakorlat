@@ -67,7 +67,7 @@ A dokumentum a Programtervező informatikus BSc-s hallgatók szakdolgozatainak b
 
 A következő szakaszok a rendszer szereplőit, az általuk elérhető funkciókat, a szakdolgozat bírálati folyamat és a Záróvizsga során elvégzendő feladataikat tartalmazzák. Erről láthatunk egy áttekintést \aref{fig:use-cases}. ábrán.
 
-\begin{figure}
+\begin{figure}[h!]
 	\centering
 	\includegraphics[width=\textwidth]{images/Use-case_diagram/use-case_1.jpg}
 	\caption{Szerepkörök és használati esetek}
@@ -132,7 +132,7 @@ A következő szakaszokban a bírálati folyamat részletezését láthatjuk kü
 
 A rendszer célja, hogy hatékonyan kezelje a szakdolgozatok bírálati folyamatát és a kapcsolódó érintett szereplők közötti kommunikációt. 
 
-\begin{figure}
+\begin{figure}[h!]
 \centering
 \begin{plantuml}
 @startuml
@@ -165,7 +165,7 @@ Témavezető->Elnök: Bírálat
 
 Ez a szekvenciadiagram lépésről lépésre bemutatja a Többszörös Bírálói Felkérés Folyamatát, a felkéréstől a végleges bírálati visszajelzésig.
 
-\begin{figure}
+\begin{figure}[h!]
 \centering
 \begin{plantuml}
 @startuml
@@ -223,7 +223,7 @@ A leírás (\ref{fig:review-multiple}. ábra) az alábbi lépéseket foglalja ö
 
 Ez a szekvenciadiagram (\ref{fig:student-creation-process}. ábra) részletesen szemlélteti a Hallgatók felvitele folyamatát az adatok megadásától az adatlap jóváhagyásának értesítéséig, mindezt az Elnök, Hallgató és Jegyző közötti interakciókkal.
 
-\begin{figure}
+\begin{figure}[h!]
 	\centering
 	\begin{plantuml}
 @startuml
@@ -298,7 +298,7 @@ E-->>H: Adatlap jóváhagyva értesítés
 
 A folyamatábra bemutatja a szakdolgozat bírálat feltöltésének folyamatát a Témavezető és a Bíráló között (\ref{fig:Biralat_Feltoltes}. ábra).
 
-\begin{figure}
+\begin{figure}[h!]
 \centering
 \includegraphics[scale=0.45]{images/Folyamatabra/Biralat_Feltoltes.png}
 \caption{Bírálat feltöltés folyamata}
@@ -326,12 +326,12 @@ A következő szakaszokban a tervezett webalkalmazás felhasználói felületén
 
 \subsection{Bejelentkezés}
 
-Gyakorlatilag minden elvégezhető művelethez bejelentkezés szükséges. Ehhez a bejelentkező felület terve \aref{fig:Login}. ábrán látható.
+Gyakorlatilag minden elvégezhető művelethez bejelentkezés szükséges. Ehhez a bejelentkező felület terve \aref{fig:Login}. ábrán látható. A bejelentkezés minden szerepkör számára azonos felületen történik.
 
-\begin{figure}
+\begin{figure}[h!]
 	\centering
-	\includegraphics[width=\textwidth]{images/Web_pages/Login.jpg}
-	\caption{}
+	\includegraphics[scale=0.4]{images/Web_pages/Login.jpg}
+	\caption{Az alkalmazás bejelentkező felülete}
 	\label{fig:Login}
 \end{figure}
 
@@ -353,10 +353,10 @@ Sikeres bejelentkezés után megnyílik a felhasználó irányítópult-oldala.
 
 A regisztrációs felület \aref{fig:Registration}. ábrán látható.
 
-\begin{figure}
+\begin{figure}[h!]
 	\centering
-	\includegraphics[width=\textwidth]{images/Web_pages/Registration.jpg}
-	\caption{}
+	\includegraphics[scale=0.4]{images/Web_pages/Registration.jpg}
+	\caption{Regisztrációs felület}
 	\label{fig:Registration}
 \end{figure}
 
@@ -382,10 +382,10 @@ Sikeres regisztráció után megnyílik a felhasználó irányítópult-oldala.
 
 Elfelejtett jelszó igényléséhez \aref{fig:Forgotten_Password}. ábrán látható felület áll rendelkezésre.
 
-\begin{figure}
+\begin{figure}[h!]
 	\centering
-	\includegraphics[width=\textwidth]{images/Web_pages/Forgotten_Password.jpg}
-	\caption{}
+	\includegraphics[scale=0.4]{images/Web_pages/Forgotten_Password.jpg}
+	\caption{Elfelejtett jelszó}
 	\label{fig:Forgotten_Password}
 \end{figure}
 
@@ -403,10 +403,10 @@ Sikeres e-mail küldés után a szövegbeviteli mező és a gomb eltűnik.
 
 A hallgatók felviteléhez tartozó felület \aref{fig:Enrollment_of_students}. ábrán látható.
 
-\begin{figure}
+\begin{figure}[h!]
 	\centering
 	\includegraphics[width=\textwidth]{images/Web_pages/Enrollment_of_students.png}
-	\caption{}
+	\caption{Hallgató felvitele}
 	\label{fig:Enrollment_of_students}
 \end{figure}
 
@@ -414,10 +414,10 @@ A hallgatók felviteléhez tartozó felület \aref{fig:Enrollment_of_students}. 
 
 A szakdolgozatok \aref{fig:Thesis_List}. ábrán látható formában listázhatóak.
 
-\begin{figure}
+\begin{figure}[h!]
 	\centering
 	\includegraphics[width=\textwidth]{images/Web_pages/Thesis_List.jpg}
-	\caption{}
+	\caption{Szakdolgozatok listázása}
 	\label{fig:Thesis_List}
 \end{figure}
 
@@ -428,10 +428,10 @@ A weblap a szakdolgozatok listázását mutatja.
 
 \subsubsection{Szakdolgozat részletei}
 
-\begin{figure}
+\begin{figure}[h!]
 	\centering
-	\includegraphics[width=\textwidth]{images/Web_pages/Thesis_Details.jpg}
-	\caption{}
+	\includegraphics[scale=0.25]{images/Web_pages/Thesis_Details.jpg}
+	\caption{Szakdolgozat részletei}
 	\label{fig:Thesis_Details}
 \end{figure}
 
@@ -445,10 +445,10 @@ A folyamat több lapból áll melyek átsegítik a felhasználót a szakdolgozat
 
 Az alapadatok beállításához tartozó lap \aref{fig:Title_Settings}. ábrán látható.
 
-\begin{figure}
+\begin{figure}[h!]
 	\centering
-	\includegraphics[width=\textwidth]{images/Web_pages/Title_Settings.png}
-	\caption{}
+	\includegraphics[scale=0.2]{images/Web_pages/Title_Settings.png}
+	\caption{Alapadatok beállítása}
 	\label{fig:Title_Settings}
 \end{figure}
 
@@ -462,10 +462,10 @@ Lehetséges hibaüzenetek:
 
 PDF fájlok feltöltése (\ref{fig:PDF_Upload}. ábra).
 
-\begin{figure}
+\begin{figure}[h!]
 	\centering
 	\includegraphics[width=\textwidth]{images/Web_pages/PDF_Upload.jpg}
-	\caption{}
+	\caption{PDF fájl feltöltése}
 	\label{fig:PDF_Upload}
 \end{figure}
 
@@ -479,10 +479,10 @@ Lehetséges hibaüzenetek:
 
 Feltöltés előtti előnézet (\ref{fig:Preview}. ábra).
 
-\begin{figure}
+\begin{figure}[h!]
 	\centering
-	\includegraphics[width=\textwidth]{images/Web_pages/Preview.jpg}
-	\caption{}
+	\includegraphics[width=0.6\textwidth]{images/Web_pages/Preview.jpg}
+	\caption{Feltöltés előtti előnézet}
 	\label{fig:Preview}
 \end{figure}
 
@@ -490,10 +490,10 @@ Feltöltés előtti előnézet (\ref{fig:Preview}. ábra).
 
 Szakdolgozat sikeres feltöltése (\ref{fig:Completed}. ábra).
 
-\begin{figure}
+\begin{figure}[h!]
 	\centering
-	\includegraphics[width=\textwidth]{images/Web_pages/Completed.jpg}
-	\caption{}
+	\includegraphics[width=0.6\textwidth]{images/Web_pages/Completed.jpg}
+	\caption{Sikeres feltöltés}
 	\label{fig:Completed}
 \end{figure}
 
@@ -501,10 +501,10 @@ Megtörtént a szakdolgozat sikeres feltöltése.
 
 \subsection{Szakdolgozatok státusza}
 
-\begin{figure}
+\begin{figure}[h!]
 	\centering
-	\includegraphics[width=\textwidth]{images/Web_pages/Thesis_Status.jpg}
-	\caption{}
+	\includegraphics[width=0.6\textwidth]{images/Web_pages/Thesis_Status.jpg}
+	\caption{Szakdolgozatok státusza}
 	\label{fig:Thesis_Status}
 \end{figure}
 
@@ -518,10 +518,10 @@ Lehetséges hibaüzenetek:
 
 \subsection{Szakdolgozat Bírálat}
 
-\begin{figure}
+\begin{figure}[h!]
 	\centering
-	\includegraphics[width=\textwidth]{images/Web_pages/Thesis_Review.jpg}
-	\caption{}
+	\includegraphics[width=0.6\textwidth]{images/Web_pages/Thesis_Review.jpg}
+	\caption{Szakdolgozat Bírálat}
 	\label{fig:Thesis_Review}
 \end{figure}
 
@@ -531,19 +531,19 @@ A Témavezető és a Bíráló itt írhatja meg a bírálatot (\ref{fig:Thesis_R
 
 Bírálatok státusza (\ref{fig:Report_Status}. ábra).
 
-\begin{figure}
+\begin{figure}[h!]
 	\centering
-	\includegraphics[width=\textwidth]{images/Web_pages/Report_Status.jpg}
-	\caption{}
+	\includegraphics[width=0.6\textwidth]{images/Web_pages/Report_Status.jpg}
+	\caption{Bírálatok státusza}
 	\label{fig:Report_Status}
 \end{figure}
 
 \subsection{Záróvizsga létrehozása}
 
-\begin{figure}
+\begin{figure}[h!]
 	\centering
-	\includegraphics[width=\textwidth]{images/Web_pages/ZV_Create.jpg}
-	\caption{}
+	\includegraphics[width=0.6\textwidth]{images/Web_pages/ZV_Create.jpg}
+	\caption{Záróvizsga létrehozása}
 	\label{fig:ZV_Create}
 \end{figure}
 
@@ -555,37 +555,37 @@ Az Elnök itt hozhatja létre a záróvizsgát.
 
 Első lap (\ref{fig:Zv_Report1}. ábra)
 
-\begin{figure}
+\begin{figure}[h!]
 	\centering
-	\includegraphics[width=\textwidth]{images/Web_pages/Zv_Report1.png}
-	\caption{}
+	\includegraphics[width=0.6\textwidth]{images/Web_pages/Zv_Report1.png}
+	\caption{Záróvizsga jegyzőkönyv, 1. oldal}
 	\label{fig:Zv_Report1}
 \end{figure}
 
 Második lap (\ref{fig:Zv_Report2}. ábra)
 
-\begin{figure}
+\begin{figure}[h!]
 	\centering
-	\includegraphics[width=\textwidth]{images/Web_pages/Zv_Report2.png}
-	\caption{}
+	\includegraphics[width=0.6\textwidth]{images/Web_pages/Zv_Report2.png}
+	\caption{Záróvizsga jegyzőkönyv, 2. oldal}
 	\label{fig:Zv_Report2}
 \end{figure}
 
 Harmadik lap (\ref{fig:Zv_Report3}. ábra)
 
-\begin{figure}
+\begin{figure}[h!]
 	\centering
-	\includegraphics[width=\textwidth]{images/Web_pages/Zv_Report3.png}
-	\caption{}
+	\includegraphics[width=0.6\textwidth]{images/Web_pages/Zv_Report3.png}
+	\caption{Záróvizsga jegyzőkönyv, 3. oldal}
 	\label{fig:Zv_Report3}
 \end{figure}
 
 Negyedik lap (\ref{fig:Zv_Report4}. ábra)
 
-\begin{figure}
+\begin{figure}[h!]
 	\centering
-	\includegraphics[width=\textwidth]{images/Web_pages/Zv_Report4.png}
-	\caption{}
+	\includegraphics[width=0.6\textwidth]{images/Web_pages/Zv_Report4.png}
+	\caption{Záróvizsga jegyzőkönyv, 4. oldal}
 	\label{fig:Zv_Report4}
 \end{figure}
 
@@ -595,10 +595,10 @@ A záróvizsga jegyzőkönyv szerkesztése látható itt. Pirossal azok a része
 
 (\ref{fig:Zv_Status}. ábra)
 
-\begin{figure}
+\begin{figure}[h!]
 	\centering
-	\includegraphics[width=\textwidth]{images/Web_pages/Zv_Status.png}
-	\caption{}
+	\includegraphics[width=0.6\textwidth]{images/Web_pages/Zv_Status.png}
+	\caption{Záróvizsga jegyek rögzítése és Záróvizsga jegyzőkönyv letöltése}
 	\label{fig:Zv_Status}
 \end{figure}
 
@@ -609,10 +609,10 @@ A záróvizsga jegyzőkönyv szerkesztése látható itt. Pirossal azok a része
 
 \subsection{Saját profil -- Hallgató}
 
-\begin{figure}
+\begin{figure}[h!]
 	\centering
-	\includegraphics[width=\textwidth]{images/Web_pages/My_Profile_Student.jpg}
-	\caption{}
+	\includegraphics[width=0.6\textwidth]{images/Web_pages/My_Profile_Student.jpg}
+	\caption{Saját profil -- Hallgató}
 	\label{fig:My_Profile_Student}
 \end{figure}
 
@@ -620,10 +620,10 @@ A Hallgató saját profilja látható a megadott adatok alapján (\ref{fig:My_Pr
 
 \subsection{Saját profil -- a többi szerepkörre}
 
-\begin{figure}
+\begin{figure}[h!]
 	\centering
-	\includegraphics[width=\textwidth]{images/Web_pages/My_Profile.jpg}
-	\caption{}
+	\includegraphics[width=0.6\textwidth]{images/Web_pages/My_Profile.jpg}
+	\caption{Saját profil -- a többi szerepkörre}
 	\label{fig:My_Profile}
 \end{figure}
 
@@ -631,21 +631,21 @@ Az Elnök, Bíráló, Jegyző, Témavezető saját profilja látható a megadott
 
 \subsection{Biztonság}
 
-\begin{figure}
+\begin{figure}[h!]
 	\centering
-	\includegraphics[width=\textwidth]{images/Web_pages/Security.jpg}
-	\caption{}
+	\includegraphics[width=0.6\textwidth]{images/Web_pages/Security.jpg}
+	\caption{Biztonság}
 	\label{fig:Security}
 \end{figure}
 
-A jelszó változtatás itt történik meg (\ref{fig:Security.jpg}. ábra).
+A jelszó változtatás itt történik meg (\ref{fig:Security}. ábra).
 
 \subsection{Történetiséget leíró lap -- Hallgató}
 
-\begin{figure}
+\begin{figure}[h!]
 	\centering
-	\includegraphics[width=\textwidth]{images/Web_pages/History_Student.jpg}
-	\caption{}
+	\includegraphics[width=0.6\textwidth]{images/Web_pages/History_Student.jpg}
+	\caption{Történetiséget leíró lap -- Hallgató}
 	\label{fig:History_Student}
 \end{figure}
 
@@ -653,10 +653,10 @@ Egy történetiséget leíró lap látható, amin az egész szakdolgozat proced�
 
 \subsection{Történetiséget leíró lap -- többi szerepkör}
 
-\begin{figure}
+\begin{figure}[h!]
 	\centering
-	\includegraphics[width=\textwidth]{images/Web_pages/History.jpg}
-	\caption{}
+	\includegraphics[width=0.6\textwidth]{images/Web_pages/History.jpg}
+	\caption{Történetiséget leíró lap -- többi szerepkör}
 	\label{fig:History}
 \end{figure}
 
@@ -664,10 +664,10 @@ Egy történetiséget leíró lap látható, amin az egész szakdolgozat proced�
 
 \subsection{Prezentáció feltöltés}
 
-\begin{figure}
+\begin{figure}[h!]
 	\centering
-	\includegraphics[width=\textwidth]{images/Web_pages/Presentation_Upload.jpg}
-	\caption{}
+	\includegraphics[width=0.6\textwidth]{images/Web_pages/Presentation_Upload.jpg}
+	\caption{Prezentáció feltöltés}
 	\label{fig:Presentation_Upload}
 \end{figure}
 
@@ -675,10 +675,10 @@ A Záróvizsgához szükséges prezentáció feltöltés itt történik meg (\re
 
 \subsection{Felhasználói adatok módosítása}
 
-\begin{figure}
+\begin{figure}[h!]
 	\centering
-	\includegraphics[width=\textwidth]{images/Web_pages/User_Modifiactions.png}
-	\caption{}
+	\includegraphics[width=0.6\textwidth]{images/Web_pages/User_Modifiactions.png}
+	\caption{Felhasználói adatok módosítása}
 	\label{fig:User_Modifiactions}
 \end{figure}
 
@@ -688,10 +688,10 @@ A felhasználói adatokat illetve jogosultságokat lehet módosítani ezen a lap
 
 \subsection{Elnök}
 
-\begin{figure}
+\begin{figure}[h!]
 	\centering
-	\includegraphics[width=\textwidth]{images/Lapok_kozotti_atmenetek/Elnok.png}
-	\caption{}
+	\includegraphics[width=0.6\textwidth]{images/Lapok_kozotti_atmenetek/Elnok.png}
+	\caption{Elnök}
 	\label{fig:Elnok}
 \end{figure}
 
@@ -707,10 +707,10 @@ A felhasználói adatokat illetve jogosultságokat lehet módosítani ezen a lap
 
 \subsection{Bíráló}
 
-\begin{figure}
+\begin{figure}[h!]
 	\centering
-	\includegraphics[width=\textwidth]{images/Lapok_kozotti_atmenetek/Biralo.png}
-	\caption{}
+	\includegraphics[width=0.6\textwidth]{images/Lapok_kozotti_atmenetek/Biralo.png}
+	\caption{Bíráló}
 	\label{fig:Biralo}
 \end{figure}
 
@@ -726,10 +726,10 @@ A felhasználói adatokat illetve jogosultságokat lehet módosítani ezen a lap
 
 \subsection{Jegyző}
 
-\begin{figure}
+\begin{figure}[h!]
 	\centering
-	\includegraphics[width=\textwidth]{images/Lapok_kozotti_atmenetek/Jegyzo.png}
-	\caption{}
+	\includegraphics[width=0.6\textwidth]{images/Lapok_kozotti_atmenetek/Jegyzo.png}
+	\caption{Jegyző}
 	\label{fig:Jegyzo}
 \end{figure}
 
@@ -746,10 +746,10 @@ A felhasználói adatokat illetve jogosultságokat lehet módosítani ezen a lap
 
 \subsection{Témavezető}
 
-\begin{figure}
+\begin{figure}[h!]
 	\centering
-	\includegraphics[width=\textwidth]{images/Lapok_kozotti_atmenetek/Temavezeto.png}
-	\caption{}
+	\includegraphics[width=0.6\textwidth]{images/Lapok_kozotti_atmenetek/Temavezeto.png}
+	\caption{Témavezető}
 	\label{fig:Temavezeto}
 \end{figure}
 
@@ -766,10 +766,10 @@ A felhasználói adatokat illetve jogosultságokat lehet módosítani ezen a lap
 
 \subsection{Hallgató}
 
-\begin{figure}
+\begin{figure}[h!]
 	\centering
-	\includegraphics[width=\textwidth]{images/Lapok_kozotti_atmenetek/Hallgato.png}
-	\caption{}
+	\includegraphics[width=0.6\textwidth]{images/Lapok_kozotti_atmenetek/Hallgato.png}
+	\caption{Hallgató}
 	\label{fig:Hallgato}
 \end{figure}
 
